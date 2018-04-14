@@ -19,7 +19,6 @@ object JuliaParserDefinition : ParserDefinition {
 	override fun createLexer(project: Project?) = JuliaLexerAdapter()
 	override fun createElement(node: ASTNode?): PsiElement = JuliaTypes.Factory.createElement(node)
 	override fun getCommentTokens() = JuliaTokenType.COMMENTS
-	override fun getWhitespaceTokens() = TokenSet.WHITE_SPACE
 }
 
 class JuliaTokenType(debugName: String) : IElementType(debugName, JuliaLanguage.INSTANCE) {

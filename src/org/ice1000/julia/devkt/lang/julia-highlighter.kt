@@ -76,9 +76,9 @@ object JuliaHighlighter {
 		JuliaTypes.REGEX_END,
 		JuliaTypes.REGULAR_STRING_PART_LITERAL -> colorScheme.string
 		JuliaTypes.STRING_INTERPOLATE_START,
-		JuliaTypes.STRING_INTERPOLATE_END -> colorScheme.semicolon // TODO
+		JuliaTypes.STRING_INTERPOLATE_END -> colorScheme.interpolation
 		JuliaTypes.STRING_ESCAPE,
-		JuliaTypes.STRING_UNICODE -> colorScheme.semicolon // TODO
+		JuliaTypes.STRING_UNICODE -> colorScheme.stringEscape
 		JuliaTypes.CHAR_LITERAL -> colorScheme.charLiteral
 		JuliaTypes.LINE_COMMENT -> colorScheme.lineComments
 		JuliaTypes.BLOCK_COMMENT_BODY,
@@ -87,8 +87,8 @@ object JuliaHighlighter {
 		JuliaTypes.INT_LITERAL,
 		JuliaTypes.FLOAT_LITERAL -> colorScheme.numbers
 		JuliaTypes.SEMICOLON_SYM -> colorScheme.semicolon
-		JuliaTypes.FLOAT_CONSTANT -> colorScheme.numbers // TODO
-		JuliaTypes.MACRO_SYM -> colorScheme.annotations // TODO
+		JuliaTypes.FLOAT_CONSTANT -> colorScheme.predefined
+		JuliaTypes.MACRO_SYM -> colorScheme.macro
 		in BRACKETS -> colorScheme.parentheses
 		in M_BRACKETS -> colorScheme.brackets
 		in B_BRACKETS -> colorScheme.braces
