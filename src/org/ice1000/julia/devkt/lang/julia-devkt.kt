@@ -18,6 +18,7 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 		when (element) {
 			is JuliaSymbol -> when {
 				element.isFunctionName -> document.highlight(element, colorScheme.function)
+				element.isVariableName -> document.highlight(element, colorScheme.variable)
 			}
 		}
 	}

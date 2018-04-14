@@ -30,6 +30,7 @@ public final class JuliaLanguage extends Language {
 		super(JULIA_LANGUAGE_NAME, "text/" + JULIA_EXTENSION);
 	}
 
+	@Contract(pure = true)
 	@Override
 	public @Nullable
 	LanguageFileType getAssociatedFileType() {
