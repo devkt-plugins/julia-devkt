@@ -21,6 +21,12 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 		JuliaTypes.TRIPLE_QUOTE_END,
 		JuliaTypes.REGEX_START,
 		JuliaTypes.REGEX_END,
+		JuliaTypes.BYTE_ARRAY_START,
+		JuliaTypes.BYTE_ARRAY_END,
+		JuliaTypes.VERSION_START,
+		JuliaTypes.VERSION_END,
+		JuliaTypes.RAW_STR_START,
+		JuliaTypes.RAW_STR_END,
 		JuliaTypes.REGULAR_STRING_PART_LITERAL -> colorScheme.string
 		JuliaTypes.STRING_INTERPOLATE_START,
 		JuliaTypes.STRING_INTERPOLATE_END -> colorScheme.interpolation
