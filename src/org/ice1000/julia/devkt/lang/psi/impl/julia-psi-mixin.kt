@@ -48,6 +48,33 @@ abstract class JuliaDeclaration(node: ASTNode) : JuliaExprMixin(node), PsiNameId
 			processDeclTrivial(processor, substitutor, lastParent, place)
 }
 
+abstract class JuliaForComprehensionMixin(node: ASTNode) : ASTWrapperPsiElement(node), JuliaForComprehension {
+	override fun processDeclarations(
+		processor: PsiScopeProcessor, state: ResolveState, lastParent: PsiElement?, place: PsiElement) =
+		comprehensionElementList.all { it.processDeclarations(processor, state, lastParent, place) } and
+			super.processDeclarations(processor, state, lastParent, place)
+
+	override var type: Type? = null
+}
+
+abstract class JuliaComprehensionElementMixin(node: ASTNode) : ASTWrapperPsiElement(node), JuliaComprehensionElement {
+	override fun processDeclarations(
+		processor: PsiScopeProcessor, state: ResolveState, lastParent: PsiElement?, place: PsiElement) =
+		singleComprehensionList.all { it.processDeclarations(processor, state, lastParent, place) } and
+			super.processDeclarations(processor, state, lastParent, place)
+}
+
+abstract class JuliaSingleComprehensionMixin(node: ASTNode) : JuliaDeclaration(node), JuliaSingleComprehension {
+	override fun getNameIdentifier(): PsiElement? = singleIndexer?.firstChild
+		?: multiIndexer?.firstChild
+
+	override fun processDeclarations(
+		processor: PsiScopeProcessor, substitutor: ResolveState, lastParent: PsiElement?, place: PsiElement) =
+		singleIndexer?.let { processor.execute(it.firstChild, substitutor) }.orFalse() and
+			multiIndexer?.let { it.children.all { processor.execute(it, substitutor) } }.orFalse() and
+			super.processDeclarations(processor, substitutor, lastParent, place)
+}
+
 abstract class JuliaTypedNamedVariableMixin(node: ASTNode) : JuliaDeclaration(node), JuliaTypedNamedVariable {
 	override var type: Type? = null
 		set(value) = Unit
@@ -187,7 +214,7 @@ interface IJuliaSymbol : JuliaExpr, PsiNameIdentifierOwner {
 	val isGlobalName: Boolean
 	val isCatchSymbol: Boolean
 	val isDeclaration: Boolean
-	val isLoopParameter: Boolean
+	val isIndexParameter: Boolean
 	val isLambdaParameter: Boolean
 }
 
@@ -254,9 +281,9 @@ abstract class JuliaSymbolMixin(node: ASTNode) : JuliaAbstractSymbol(node), Juli
 	final override val isLambdaParameter: Boolean by lazy {
 		parent is JuliaLambda || (parent is JuliaTuple && parent.parent is JuliaLambda)
 	}
-	final override val isLoopParameter: Boolean by lazy {
-		(parent is JuliaSingleIndexer && parent.parent is JuliaForExpr) ||
-			(parent.parent is JuliaMultiIndexer && parent.parent.parent is JuliaForExpr)
+	final override val isIndexParameter: Boolean by lazy {
+		parent is JuliaSingleIndexer ||
+			parent.parent is JuliaMultiIndexer
 	}
 	final override val isVariableName by lazy {
 		parent is JuliaAssignOp && this === parent.firstChild ||
@@ -273,7 +300,7 @@ abstract class JuliaSymbolMixin(node: ASTNode) : JuliaAbstractSymbol(node), Juli
 			isGlobalName or
 			isPrimitiveTypeName or
 			isCatchSymbol or
-			isLoopParameter or
+			isIndexParameter or
 			isLambdaParameter
 	}
 
@@ -329,8 +356,7 @@ abstract class JuliaLoopDeclarationMixin(node: ASTNode) : JuliaDeclaration(node)
 abstract class JuliaLambdaMixin(node: ASTNode) : JuliaDeclaration(node), JuliaLambda {
 	private val paramCandidates get() = childrenBefore(JuliaTypes.LAMBDA_ABSTRACTION)
 	override fun getNameIdentifier() = children.firstOrNull { it is JuliaExpr }?.let {
-		it as? JuliaSymbol
-				?: (it as? JuliaTuple)?.children?.firstOrNull { it is JuliaSymbol }
+		it as? JuliaSymbol ?: (it as? JuliaTuple)?.children?.firstOrNull { it is JuliaSymbol }
 	}
 
 	override fun processDeclarations(

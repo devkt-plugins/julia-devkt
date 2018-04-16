@@ -16,8 +16,8 @@ import org.jetbrains.kotlin.com.intellij.psi.util.PsiTreeUtil
  * element should be only [JuliaSymbol] or [JuliaMacroSymbol]
  */
 class JuliaSymbolRef(
-		private val symbol: JuliaAbstractSymbol,
-		private var refTo: PsiElement? = null) : PsiPolyVariantReference {
+	private val symbol: JuliaAbstractSymbol,
+	private var refTo: PsiElement? = null) : PsiPolyVariantReference {
 	private val range = TextRange(0, element.textLength)
 	private val isDeclaration = (element as? JuliaSymbol)?.isDeclaration.orFalse()
 	private val resolver by lazy {
@@ -41,7 +41,7 @@ class JuliaSymbolRef(
 		val file = element.containingFile ?: return emptyArray()
 		if (isDeclaration or !element.isValid or element.project.isDisposed) return emptyArray()
 		return ResolveCache.getInstance(element.project)
-				.resolveWithCaching(this, resolver, true, incompleteCode, file)
+			.resolveWithCaching(this, resolver, true, incompleteCode, file)
 	}
 
 	private companion object ResolverHolder {
@@ -61,6 +61,7 @@ class JuliaSymbolRef(
 	}
 }
 
+
 abstract class ResolveProcessor<ResolveResult>(private val place: PsiElement) : PsiScopeProcessor {
 	abstract val candidateSet: ArrayList<ResolveResult>
 	override fun handleEvent(event: PsiScopeProcessor.Event, o: Any?) = Unit
@@ -69,24 +70,25 @@ abstract class ResolveProcessor<ResolveResult>(private val place: PsiElement) : 
 	fun isInScope(element: PsiElement) = when {
 		element !is JuliaSymbol -> false
 		element.isFunctionParameter -> PsiTreeUtil.isAncestor(
-				PsiTreeUtil.getParentOfType(element, IJuliaFunctionDeclaration::class.java), place, true)
+			PsiTreeUtil.getParentOfType(element, IJuliaFunctionDeclaration::class.java), place, true)
 		element.isCatchSymbol -> PsiTreeUtil.isAncestor(
-				PsiTreeUtil.getParentOfType(element, JuliaCatchClause::class.java), place, true)
-		element.isLoopParameter -> PsiTreeUtil.isAncestor(
-				PsiTreeUtil.getParentOfType(element, JuliaForExpr::class.java), place, true)
+			PsiTreeUtil.getParentOfType(element, JuliaCatchClause::class.java), place, true)
+		element.isIndexParameter -> PsiTreeUtil.isAncestor(
+			PsiTreeUtil.getParentOfType(element, JuliaForExpr::class.java)
+				?: PsiTreeUtil.getParentOfType(element, JuliaForComprehension::class.java), place, true)
 		element.isLambdaParameter -> PsiTreeUtil.isAncestor(
-				PsiTreeUtil.getParentOfType(element, JuliaLambda::class.java), place, false)
+			PsiTreeUtil.getParentOfType(element, JuliaLambda::class.java), place, false)
 		element.isDeclaration -> PsiTreeUtil.isAncestor(
-				PsiTreeUtil.getParentOfType(element, JuliaStatements::class.java), place, false)
+			PsiTreeUtil.getParentOfType(element, JuliaStatements::class.java), place, false)
 		else -> false
 	}
 }
 
 open class SymbolResolveProcessor(
-		@JvmField protected val name: String,
-		place: PsiElement,
-		private val incompleteCode: Boolean) :
-		ResolveProcessor<PsiElementResolveResult>(place) {
+	@JvmField protected val name: String,
+	place: PsiElement,
+	private val incompleteCode: Boolean) :
+	ResolveProcessor<PsiElementResolveResult>(place) {
 	constructor(ref: JuliaSymbolRef, incompleteCode: Boolean) : this(ref.canonicalText, ref.element, incompleteCode)
 
 	override val candidateSet = ArrayList<PsiElementResolveResult>(3)
@@ -103,7 +105,7 @@ open class SymbolResolveProcessor(
 }
 
 class MacroSymbolResolveProcessor(name: String, place: PsiElement, incompleteCode: Boolean) :
-		SymbolResolveProcessor(name, place, incompleteCode) {
+	SymbolResolveProcessor(name, place, incompleteCode) {
 	constructor(ref: JuliaSymbolRef, incompleteCode: Boolean) : this(ref.canonicalText, ref.element, incompleteCode)
 
 	override fun accessible(element: PsiElement) = "@${element.text}" == name && isInScope(element)
