@@ -4,7 +4,7 @@ import java.io.*
 val kotlinVersion = "1.2.31"
 
 group = "org.ice1000.julia.devkt.lang"
-version = "v1.0"
+version = "v1.1-SNAPSHOT"
 
 plugins {
   java
