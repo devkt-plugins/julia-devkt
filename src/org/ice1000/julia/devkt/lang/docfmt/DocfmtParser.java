@@ -7,7 +7,6 @@ import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder.Marker;
 import static org.jetbrains.kotlin.com.intellij.lang.parser.GeneratedParserUtilBase.*;
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
-import org.jetbrains.kotlin.com.intellij.psi.tree.TokenSet;
 import org.jetbrains.kotlin.com.intellij.lang.PsiParser;
 import org.jetbrains.kotlin.com.intellij.lang.LightPsiParser;
 import org.ice1000.julia.devkt.lang.docfmt.psi.DocfmtTypes;

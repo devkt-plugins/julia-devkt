@@ -1,16 +1,16 @@
 // This is a generated file. Not intended for manual editing.
 package org.ice1000.julia.devkt.lang;
 
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
+import org.jetbrains.kotlin.com.intellij.lang.LightPsiParser;
 import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder;
 import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder.Marker;
-
-import static org.jetbrains.kotlin.com.intellij.lang.parser.GeneratedParserUtilBase.*;
-import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
-import org.jetbrains.kotlin.com.intellij.psi.tree.TokenSet;
 import org.jetbrains.kotlin.com.intellij.lang.PsiParser;
-import org.jetbrains.kotlin.com.intellij.lang.LightPsiParser;
-import org.ice1000.julia.devkt.lang.psi.JuliaTypes;
+import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
+import org.jetbrains.kotlin.com.intellij.psi.tree.TokenSet;
+
+import static org.ice1000.julia.devkt.lang.psi.JuliaTypes.*;
+import static org.jetbrains.kotlin.com.intellij.lang.parser.GeneratedParserUtilBase.*;
 
 @SuppressWarnings({"SimplifiableIfStatement", "UnusedAssignment"})
 public class JuliaParser implements PsiParser, LightPsiParser {
@@ -24,109 +24,109 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     boolean result_;
     builder_ = adapt_builder_(root_, builder_, this, EXTENDS_SETS_);
     Marker marker_ = enter_section_(builder_, 0, _COLLAPSE_, null);
-    if (root_ == JuliaTypes.ARGUMENTS) {
+    if (root_ == ARGUMENTS) {
       result_ = arguments(builder_, 0);
     }
-    else if (root_ == JuliaTypes.ASSIGN_LEVEL_OPERATOR) {
+    else if (root_ == ASSIGN_LEVEL_OPERATOR) {
       result_ = assignLevelOperator(builder_, 0);
     }
-    else if (root_ == JuliaTypes.BITWISE_LEVEL_OPERATOR) {
+    else if (root_ == BITWISE_LEVEL_OPERATOR) {
       result_ = bitwiseLevelOperator(builder_, 0);
     }
-    else if (root_ == JuliaTypes.CATCH_CLAUSE) {
+    else if (root_ == CATCH_CLAUSE) {
       result_ = catchClause(builder_, 0);
     }
-    else if (root_ == JuliaTypes.COLON_SYM_BEGINS) {
+    else if (root_ == COLON_SYM_BEGINS) {
       result_ = colonSymBegins(builder_, 0);
     }
-    else if (root_ == JuliaTypes.COMPARISON_LEVEL_OPERATOR) {
+    else if (root_ == COMPARISON_LEVEL_OPERATOR) {
       result_ = comparisonLevelOperator(builder_, 0);
     }
-    else if (root_ == JuliaTypes.COMPREHENSION_ELEMENT) {
+    else if (root_ == COMPREHENSION_ELEMENT) {
       result_ = comprehensionElement(builder_, 0);
     }
-    else if (root_ == JuliaTypes.DO_BLOCK) {
+    else if (root_ == DO_BLOCK) {
       result_ = doBlock(builder_, 0);
     }
-    else if (root_ == JuliaTypes.ELSE_CLAUSE) {
+    else if (root_ == ELSE_CLAUSE) {
       result_ = elseClause(builder_, 0);
     }
-    else if (root_ == JuliaTypes.ELSE_IF_CLAUSE) {
+    else if (root_ == ELSE_IF_CLAUSE) {
       result_ = elseIfClause(builder_, 0);
     }
-    else if (root_ == JuliaTypes.EXPR) {
+    else if (root_ == EXPR) {
       result_ = expr(builder_, 0, -1);
     }
-    else if (root_ == JuliaTypes.EXPR_OR_END) {
+    else if (root_ == EXPR_OR_END) {
       result_ = exprOrEnd(builder_, 0, -1);
     }
-    else if (root_ == JuliaTypes.FINALLY_CLAUSE) {
+    else if (root_ == FINALLY_CLAUSE) {
       result_ = finallyClause(builder_, 0);
     }
-    else if (root_ == JuliaTypes.FUNCTION_SIGNATURE) {
+    else if (root_ == FUNCTION_SIGNATURE) {
       result_ = functionSignature(builder_, 0);
     }
-    else if (root_ == JuliaTypes.GLOBAL_STATEMENT) {
+    else if (root_ == GLOBAL_STATEMENT) {
       result_ = globalStatement(builder_, 0);
     }
-    else if (root_ == JuliaTypes.MEMBER_ACCESS) {
+    else if (root_ == MEMBER_ACCESS) {
       result_ = memberAccess(builder_, 0);
     }
-    else if (root_ == JuliaTypes.MODULE_DECLARATION) {
+    else if (root_ == MODULE_DECLARATION) {
       result_ = moduleDeclaration(builder_, 0);
     }
-    else if (root_ == JuliaTypes.MULTI_INDEXER) {
+    else if (root_ == MULTI_INDEXER) {
       result_ = multiIndexer(builder_, 0);
     }
-    else if (root_ == JuliaTypes.MULTIPLY_LEVEL_OPERATOR) {
+    else if (root_ == MULTIPLY_LEVEL_OPERATOR) {
       result_ = multiplyLevelOperator(builder_, 0);
     }
-    else if (root_ == JuliaTypes.NAMED_PARAMETER) {
+    else if (root_ == NAMED_PARAMETER) {
       result_ = namedParameter(builder_, 0);
     }
-    else if (root_ == JuliaTypes.OP_AS_SYMBOL) {
+    else if (root_ == OP_AS_SYMBOL) {
       result_ = opAsSymbol(builder_, 0);
     }
-    else if (root_ == JuliaTypes.PIPE_LEVEL_OPERATOR) {
+    else if (root_ == PIPE_LEVEL_OPERATOR) {
       result_ = pipeLevelOperator(builder_, 0);
     }
-    else if (root_ == JuliaTypes.PLUS_LEVEL_OPERATOR) {
+    else if (root_ == PLUS_LEVEL_OPERATOR) {
       result_ = plusLevelOperator(builder_, 0);
     }
-    else if (root_ == JuliaTypes.SINGLE_COMPREHENSION) {
+    else if (root_ == SINGLE_COMPREHENSION) {
       result_ = singleComprehension(builder_, 0);
     }
-    else if (root_ == JuliaTypes.SINGLE_INDEXER) {
+    else if (root_ == SINGLE_INDEXER) {
       result_ = singleIndexer(builder_, 0);
     }
-    else if (root_ == JuliaTypes.STATEMENTS) {
+    else if (root_ == STATEMENTS) {
       result_ = statements(builder_, 0);
     }
-    else if (root_ == JuliaTypes.STRING_CONTENT) {
+    else if (root_ == STRING_CONTENT) {
       result_ = stringContent(builder_, 0);
     }
-    else if (root_ == JuliaTypes.TEMPLATE) {
+    else if (root_ == TEMPLATE) {
       result_ = template(builder_, 0);
     }
-    else if (root_ == JuliaTypes.TYPE_ANNOTATION) {
+    else if (root_ == TYPE_ANNOTATION) {
       result_ = typeAnnotation(builder_, 0);
     }
-    else if (root_ == JuliaTypes.TYPE_PARAMETERS) {
+    else if (root_ == TYPE_PARAMETERS) {
       result_ = typeParameters(builder_, 0);
     }
-    else if (root_ == JuliaTypes.TYPED_NAMED_VARIABLE) {
+    else if (root_ == TYPED_NAMED_VARIABLE) {
       result_ = typedNamedVariable(builder_, 0);
     }
-    else if (root_ == JuliaTypes.UNARY_OP_AS_SYMBOL) {
+    else if (root_ == UNARY_OP_AS_SYMBOL) {
       result_ = unaryOpAsSymbol(builder_, 0);
     }
-    else if (root_ == JuliaTypes.UNTYPED_VARIABLES) {
+    else if (root_ == UNTYPED_VARIABLES) {
       result_ = untypedVariables(builder_, 0);
     }
-    else if (root_ == JuliaTypes.USER_TYPE) {
+    else if (root_ == USER_TYPE) {
       result_ = userType(builder_, 0);
     }
-    else if (root_ == JuliaTypes.WHERE_CLAUSE) {
+    else if (root_ == WHERE_CLAUSE) {
       result_ = whereClause(builder_, 0);
     }
     else {
@@ -140,28 +140,29 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   }
 
   public static final TokenSet[] EXTENDS_SETS_ = new TokenSet[] {
-    create_token_set_(JuliaTypes.END, JuliaTypes.EXPR_OR_END, JuliaTypes.EXPR_WRAPPER, JuliaTypes.MULTIPLY_INDEXING,
-      JuliaTypes.PLUS_INDEXING, JuliaTypes.RANGE_INDEXING),
-    create_token_set_(JuliaTypes.ABSTRACT_TYPE_DECLARATION, JuliaTypes.AND_OP, JuliaTypes.APPLY_FUNCTION_OP, JuliaTypes.APPLY_INDEX_OP,
-      JuliaTypes.APPLY_MACRO_OP, JuliaTypes.APPLY_WHERE_OP, JuliaTypes.ARRAY, JuliaTypes.ARROW_OP,
-      JuliaTypes.ASSIGN_LEVEL_OP, JuliaTypes.ASSIGN_OP, JuliaTypes.BITWISE_LEVEL_OP, JuliaTypes.BIT_WISE_NOT_OP,
-      JuliaTypes.BLOCK, JuliaTypes.BOOLEAN_LIT, JuliaTypes.BRACKETED_EXPR, JuliaTypes.BREAK_EXPR,
-      JuliaTypes.CHAR_LIT, JuliaTypes.COLON_BLOCK, JuliaTypes.COLON_OP, JuliaTypes.COMMAND,
-      JuliaTypes.COMPACT_FUNCTION, JuliaTypes.COMPARISON_LEVEL_OP, JuliaTypes.COMPOUND_QUOTE_OP, JuliaTypes.CONTINUE_EXPR,
-      JuliaTypes.DO_BLOCK, JuliaTypes.EXPONENT_OP, JuliaTypes.EXPORT, JuliaTypes.EXPR,
-      JuliaTypes.FLOAT_LIT, JuliaTypes.FOR_COMPREHENSION, JuliaTypes.FOR_EXPR, JuliaTypes.FRACTION_OP,
-      JuliaTypes.FUNCTION, JuliaTypes.IF_EXPR, JuliaTypes.IMPLICIT_MULTIPLY_OP, JuliaTypes.IMPORT_ALL_EXPR,
-      JuliaTypes.IMPORT_EXPR, JuliaTypes.INTEGER, JuliaTypes.IN_AS_OP, JuliaTypes.IN_OP,
-      JuliaTypes.LAMBDA, JuliaTypes.LET, JuliaTypes.MACRO, JuliaTypes.MACRO_SYMBOL,
-      JuliaTypes.MEMBER_ACCESS_OP, JuliaTypes.MISC_ARROWS_OP, JuliaTypes.MISC_EXPONENT_OP, JuliaTypes.MULTIPLY_LEVEL_OP,
-      JuliaTypes.NOT_OP, JuliaTypes.OP_AS_SYMBOL, JuliaTypes.OR_OP, JuliaTypes.PIPE_LEVEL_OP,
-      JuliaTypes.PLUS_LEVEL_OP, JuliaTypes.PRIMITIVE_TYPE_DECLARATION, JuliaTypes.QUOTE_OP, JuliaTypes.RANGE_OP,
-      JuliaTypes.REGEX, JuliaTypes.RETURN_EXPR, JuliaTypes.SPLICE_OP, JuliaTypes.STRING,
-      JuliaTypes.SYMBOL, JuliaTypes.SYMBOL_LHS, JuliaTypes.TERNARY_OP, JuliaTypes.TRANSPOSE_OP,
-      JuliaTypes.TRY_CATCH, JuliaTypes.TUPLE, JuliaTypes.TYPE, JuliaTypes.TYPE_ALIAS,
-      JuliaTypes.TYPE_DECLARATION, JuliaTypes.TYPE_OP, JuliaTypes.UNARY_INTERPOLATE_OP, JuliaTypes.UNARY_MINUS_OP,
-      JuliaTypes.UNARY_OP_AS_SYMBOL, JuliaTypes.UNARY_PLUS_OP, JuliaTypes.UNARY_SUBTYPE_OP, JuliaTypes.UNARY_TYPE_OP,
-      JuliaTypes.UNION, JuliaTypes.USING, JuliaTypes.WHILE_EXPR),
+    create_token_set_(END, EXPR_OR_END, EXPR_WRAPPER, MULTIPLY_INDEXING,
+      PLUS_INDEXING, RANGE_INDEXING),
+    create_token_set_(ABSTRACT_TYPE_DECLARATION, AND_OP, APPLY_FUNCTION_OP, APPLY_INDEX_OP,
+      APPLY_MACRO_OP, APPLY_WHERE_OP, ARRAY, ARROW_OP,
+      ASSIGN_LEVEL_OP, ASSIGN_OP, BITWISE_LEVEL_OP, BIT_WISE_NOT_OP,
+      BLOCK, BOOLEAN_LIT, BRACKETED_EXPR, BREAK_EXPR,
+      BYTE_ARRAY, CHAR_LIT, COLON_BLOCK, COLON_OP,
+      COMMAND, COMPACT_FUNCTION, COMPARISON_LEVEL_OP, COMPOUND_QUOTE_OP,
+      CONTINUE_EXPR, DO_BLOCK, EXPONENT_OP, EXPORT,
+      EXPR, FLOAT_LIT, FOR_COMPREHENSION, FOR_EXPR,
+      FRACTION_OP, FUNCTION, IF_EXPR, IMPLICIT_MULTIPLY_OP,
+      IMPORT_ALL_EXPR, IMPORT_EXPR, INTEGER, IN_AS_OP,
+      IN_OP, LAMBDA, LET, MACRO,
+      MACRO_SYMBOL, MEMBER_ACCESS_OP, MISC_ARROWS_OP, MISC_EXPONENT_OP,
+      MULTIPLY_LEVEL_OP, NOT_OP, OP_AS_SYMBOL, OR_OP,
+      PIPE_LEVEL_OP, PLUS_LEVEL_OP, PRIMITIVE_TYPE_DECLARATION, QUOTE_OP,
+      RANGE_OP, RAW_STRING, REGEX, RETURN_EXPR,
+      SPLICE_OP, STRING, SYMBOL, SYMBOL_LHS,
+      TERNARY_OP, TRANSPOSE_OP, TRY_CATCH, TUPLE,
+      TYPE, TYPE_ALIAS, TYPE_DECLARATION, TYPE_OP,
+      UNARY_INTERPOLATE_OP, UNARY_MINUS_OP, UNARY_OP_AS_SYMBOL, UNARY_PLUS_OP,
+      UNARY_SUBTYPE_OP, UNARY_TYPE_OP, UNION, USING,
+      VERSION_NUMBER, WHILE_EXPR),
   };
 
   /* ********************************************************** */
@@ -188,9 +189,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "access_0_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.DOT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.DOUBLE_DOT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SLICE_SYM);
+    result_ = consumeToken(builder_, DOT_SYM);
+    if (!result_) result_ = consumeToken(builder_, DOUBLE_DOT_SYM);
+    if (!result_) result_ = consumeToken(builder_, SLICE_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -204,7 +205,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //    RIGHT_B_BRACKET
   static boolean afterWhere(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "afterWhere")) return false;
-    if (!nextTokenIs(builder_, "", JuliaTypes.LEFT_B_BRACKET, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, "", LEFT_B_BRACKET, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = afterWhere_0(builder_, level_ + 1);
@@ -241,9 +242,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "afterWhere_0_0_1")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.LEFT_B_BRACKET);
+    result_ = consumeToken(builder_, LEFT_B_BRACKET);
     result_ = result_ && symbol(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_B_BRACKET);
+    result_ = result_ && consumeToken(builder_, RIGHT_B_BRACKET);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -272,8 +273,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "afterWhere_0_1_0_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.SUBTYPE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EQ_SYM);
+    result_ = consumeToken(builder_, SUBTYPE_SYM);
+    if (!result_) result_ = consumeToken(builder_, EQ_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -286,11 +287,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "afterWhere_1")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.LEFT_B_BRACKET);
+    result_ = consumeToken(builder_, LEFT_B_BRACKET);
     result_ = result_ && afterWhere_1_1(builder_, level_ + 1);
     result_ = result_ && afterWhere_1_2(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_B_BRACKET);
+    result_ = result_ && consumeToken(builder_, RIGHT_B_BRACKET);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -339,7 +340,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // COMMA_SYM?
   private static boolean afterWhere_1_2(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "afterWhere_1_2")) return false;
-    consumeToken(builder_, JuliaTypes.COMMA_SYM);
+    consumeToken(builder_, COMMA_SYM);
     return true;
   }
 
@@ -352,14 +353,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  endOfLine
   public static boolean arguments(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "arguments")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.SEMICOLON_SYM)) return false;
+    if (!nextTokenIs(builder_, SEMICOLON_SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.SEMICOLON_SYM);
+    result_ = consumeToken(builder_, SEMICOLON_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && arguments_2(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.ARGUMENTS, result_);
+    exit_section_(builder_, marker_, ARGUMENTS, result_);
     return result_;
   }
 
@@ -428,23 +429,23 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean assignLevelOperator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "assignLevelOperator")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.ASSIGN_LEVEL_OPERATOR, "<assign level operator>");
-    result_ = consumeToken(builder_, JuliaTypes.COLON_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_AND_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_OR_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_XOR_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.INVERSE_DIV_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SHL_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SHR_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.REMAINDER_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.USHR_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.PLUS_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MINUS_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MULTIPLY_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.FRACTION_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.DIVIDE_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.FACTORISE_ASSIGN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EXPONENT_ASSIGN_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, ASSIGN_LEVEL_OPERATOR, "<assign level operator>");
+    result_ = consumeToken(builder_, COLON_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_AND_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_OR_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_XOR_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, INVERSE_DIV_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, SHL_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, SHR_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, REMAINDER_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, USHR_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, PLUS_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, MINUS_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, MULTIPLY_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, FRACTION_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, DIVIDE_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, FACTORISE_ASSIGN_SYM);
+    if (!result_) result_ = consumeToken(builder_, EXPONENT_ASSIGN_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -456,10 +457,10 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean bitwiseLevelOperator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "bitwiseLevelOperator")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.BITWISE_LEVEL_OPERATOR, "<bitwise level operator>");
-    result_ = consumeToken(builder_, JuliaTypes.SHR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.USHR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SHL_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, BITWISE_LEVEL_OPERATOR, "<bitwise level operator>");
+    result_ = consumeToken(builder_, SHR_SYM);
+    if (!result_) result_ = consumeToken(builder_, USHR_SYM);
+    if (!result_) result_ = consumeToken(builder_, SHL_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -468,12 +469,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // BLOCK_COMMENT_START (BLOCK_COMMENT_BODY | blockComment)* BLOCK_COMMENT_END
   static boolean blockComment(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "blockComment")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.BLOCK_COMMENT_START)) return false;
+    if (!nextTokenIs(builder_, BLOCK_COMMENT_START)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.BLOCK_COMMENT_START);
+    result_ = consumeToken(builder_, BLOCK_COMMENT_START);
     result_ = result_ && blockComment_1(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.BLOCK_COMMENT_END);
+    result_ = result_ && consumeToken(builder_, BLOCK_COMMENT_END);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -495,7 +496,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "blockComment_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.BLOCK_COMMENT_BODY);
+    result_ = consumeToken(builder_, BLOCK_COMMENT_BODY);
     if (!result_) result_ = blockComment(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -506,14 +507,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  statements
   public static boolean catchClause(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "catchClause")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.CATCH_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, CATCH_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.CATCH_KEYWORD);
+    result_ = consumeToken(builder_, CATCH_KEYWORD);
     result_ = result_ && catchClause_1(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.CATCH_CLAUSE, result_);
+    exit_section_(builder_, marker_, CATCH_CLAUSE, result_);
     return result_;
   }
 
@@ -528,13 +529,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // COLON_SYM endOfLine LEFT_BRACKET
   public static boolean colonSymBegins(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "colonSymBegins")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.COLON_SYM)) return false;
+    if (!nextTokenIs(builder_, COLON_SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.COLON_SYM);
+    result_ = consumeToken(builder_, COLON_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.LEFT_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.COLON_SYM_BEGINS, result_);
+    result_ = result_ && consumeToken(builder_, LEFT_BRACKET);
+    exit_section_(builder_, marker_, COLON_SYM_BEGINS, result_);
     return result_;
   }
 
@@ -545,7 +546,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.COMMA_SYM);
+    result_ = result_ && consumeToken(builder_, COMMA_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -555,11 +556,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // blockComment | LINE_COMMENT
   static boolean comment(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "comment")) return false;
-    if (!nextTokenIs(builder_, "", JuliaTypes.BLOCK_COMMENT_START, JuliaTypes.LINE_COMMENT)) return false;
+    if (!nextTokenIs(builder_, "", BLOCK_COMMENT_START, LINE_COMMENT)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = blockComment(builder_, level_ + 1);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.LINE_COMMENT);
+    if (!result_) result_ = consumeToken(builder_, LINE_COMMENT);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -578,17 +579,17 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean comparisonLevelOperator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "comparisonLevelOperator")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.COMPARISON_LEVEL_OPERATOR, "<comparison level operator>");
-    result_ = consumeToken(builder_, JuliaTypes.LESS_THAN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.LESS_THAN_OR_EQUAL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.GREATER_THAN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.GREATER_THAN_OR_EQUAL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EQUALS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.UNEQUAL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.IS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.ISNT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SUBTYPE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_COMPARISON_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, COMPARISON_LEVEL_OPERATOR, "<comparison level operator>");
+    result_ = consumeToken(builder_, LESS_THAN_SYM);
+    if (!result_) result_ = consumeToken(builder_, LESS_THAN_OR_EQUAL_SYM);
+    if (!result_) result_ = consumeToken(builder_, GREATER_THAN_SYM);
+    if (!result_) result_ = consumeToken(builder_, GREATER_THAN_OR_EQUAL_SYM);
+    if (!result_) result_ = consumeToken(builder_, EQUALS_SYM);
+    if (!result_) result_ = consumeToken(builder_, UNEQUAL_SYM);
+    if (!result_) result_ = consumeToken(builder_, IS_SYM);
+    if (!result_) result_ = consumeToken(builder_, ISNT_SYM);
+    if (!result_) result_ = consumeToken(builder_, SUBTYPE_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_COMPARISON_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -602,7 +603,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean comprehensionElement(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "comprehensionElement")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.COMPREHENSION_ELEMENT, "<comprehension element>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, COMPREHENSION_ELEMENT, "<comprehension element>");
     result_ = endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
@@ -637,7 +638,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "comprehensionElement_3_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.FOR_KEYWORD);
+    result_ = consumeToken(builder_, FOR_KEYWORD);
     result_ = result_ && singleComprehension(builder_, level_ + 1);
     result_ = result_ && comprehensionElement_3_0_2(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
@@ -666,13 +667,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // DO_KEYWORD statements END_KEYWORD
   public static boolean doBlock(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "doBlock")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.DO_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, DO_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.DO_KEYWORD);
+    result_ = consumeToken(builder_, DO_KEYWORD);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.DO_BLOCK, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, DO_BLOCK, result_);
     return result_;
   }
 
@@ -680,12 +681,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // ELSE_KEYWORD statements
   public static boolean elseClause(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "elseClause")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.ELSE_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, ELSE_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.ELSE_KEYWORD);
+    result_ = consumeToken(builder_, ELSE_KEYWORD);
     result_ = result_ && statements(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.ELSE_CLAUSE, result_);
+    exit_section_(builder_, marker_, ELSE_CLAUSE, result_);
     return result_;
   }
 
@@ -694,14 +695,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  statements
   public static boolean elseIfClause(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "elseIfClause")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.ELSEIF_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, ELSEIF_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.ELSEIF_KEYWORD);
+    result_ = consumeToken(builder_, ELSEIF_KEYWORD);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.ELSE_IF_CLAUSE, result_);
+    exit_section_(builder_, marker_, ELSE_IF_CLAUSE, result_);
     return result_;
   }
 
@@ -724,7 +725,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "endOfLineImpl")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.EOL);
+    result_ = consumeToken(builder_, EOL);
     if (!result_) result_ = comment(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -769,7 +770,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // COMMA_SYM?
   private static boolean expressionList_2(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "expressionList_2")) return false;
-    consumeToken(builder_, JuliaTypes.COMMA_SYM);
+    consumeToken(builder_, COMMA_SYM);
     return true;
   }
 
@@ -777,12 +778,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // FINALLY_KEYWORD statements
   public static boolean finallyClause(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "finallyClause")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.FINALLY_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, FINALLY_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.FINALLY_KEYWORD);
+    result_ = consumeToken(builder_, FINALLY_KEYWORD);
     result_ = result_ && statements(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.FINALLY_CLAUSE, result_);
+    exit_section_(builder_, marker_, FINALLY_CLAUSE, result_);
     return result_;
   }
 
@@ -796,17 +797,17 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_BRACKET
   public static boolean functionSignature(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "functionSignature")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.LEFT_BRACKET)) return false;
+    if (!nextTokenIs(builder_, LEFT_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.LEFT_BRACKET);
+    result_ = consumeToken(builder_, LEFT_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && functionSignature_2(builder_, level_ + 1);
     result_ = result_ && functionSignature_3(builder_, level_ + 1);
     result_ = result_ && functionSignature_4(builder_, level_ + 1);
     result_ = result_ && functionSignature_5(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.FUNCTION_SIGNATURE, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
+    exit_section_(builder_, marker_, FUNCTION_SIGNATURE, result_);
     return result_;
   }
 
@@ -865,7 +866,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "functionSignature_3_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.SEMICOLON_SYM);
+    result_ = consumeToken(builder_, SEMICOLON_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && functionSignature_3_0_2(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
@@ -932,7 +933,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "functionSignature_5_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.SLICE_SYM);
+    result_ = consumeToken(builder_, SLICE_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -943,14 +944,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  symbol (COMMA_SYM endOfLine symbol)*
   public static boolean globalStatement(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "globalStatement")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.GLOBAL_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, GLOBAL_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.GLOBAL_KEYWORD);
+    result_ = consumeToken(builder_, GLOBAL_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && symbol(builder_, level_ + 1);
     result_ = result_ && globalStatement_3(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.GLOBAL_STATEMENT, result_);
+    exit_section_(builder_, marker_, GLOBAL_STATEMENT, result_);
     return result_;
   }
 
@@ -971,7 +972,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "globalStatement_3_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.COMMA_SYM);
+    result_ = consumeToken(builder_, COMMA_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && symbol(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
@@ -1003,7 +1004,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "imported_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.COLON_SYM);
+    result_ = consumeToken(builder_, COLON_SYM);
     result_ = result_ && symbolAndMacroSymbol(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -1036,7 +1037,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // multiIndexer | singleIndexer
   static boolean indexer(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "indexer")) return false;
-    if (!nextTokenIs(builder_, "", JuliaTypes.LEFT_BRACKET, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, "", LEFT_BRACKET, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = multiIndexer(builder_, level_ + 1);
@@ -1051,9 +1052,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "infixIndexer")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.IN_KEYWORD);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.IN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EQ_SYM);
+    result_ = consumeToken(builder_, IN_KEYWORD);
+    if (!result_) result_ = consumeToken(builder_, IN_SYM);
+    if (!result_) result_ = consumeToken(builder_, EQ_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -1078,9 +1079,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean memberAccess(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "memberAccess")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.MEMBER_ACCESS, "<member access>");
-    result_ = consumeToken(builder_, JuliaTypes.IN_KEYWORD);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.UNION_KEYWORD);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, MEMBER_ACCESS, "<member access>");
+    result_ = consumeToken(builder_, IN_KEYWORD);
+    if (!result_) result_ = consumeToken(builder_, UNION_KEYWORD);
     if (!result_) result_ = opAsSymbol(builder_, level_ + 1);
     if (!result_) result_ = memberAccess_3(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
@@ -1115,7 +1116,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "memberAccess_3_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.DOT_SYM);
+    result_ = consumeToken(builder_, DOT_SYM);
     result_ = result_ && symbolAndMacroSymbol(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -1127,14 +1128,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  END_KEYWORD
   public static boolean moduleDeclaration(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "moduleDeclaration")) return false;
-    if (!nextTokenIs(builder_, "<module declaration>", JuliaTypes.BAREMODULE_KEYWORD, JuliaTypes.MODULE_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, "<module declaration>", BAREMODULE_KEYWORD, MODULE_KEYWORD)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.MODULE_DECLARATION, "<module declaration>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, MODULE_DECLARATION, "<module declaration>");
     result_ = moduleDeclaration_0(builder_, level_ + 1);
     result_ = result_ && symbol(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -1144,8 +1145,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "moduleDeclaration_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.BAREMODULE_KEYWORD);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MODULE_KEYWORD);
+    result_ = consumeToken(builder_, BAREMODULE_KEYWORD);
+    if (!result_) result_ = consumeToken(builder_, MODULE_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -1154,14 +1155,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // tuple infixIndexer endOfLine expr
   public static boolean multiIndexer(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "multiIndexer")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.LEFT_BRACKET)) return false;
+    if (!nextTokenIs(builder_, LEFT_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = tuple(builder_, level_ + 1);
     result_ = result_ && infixIndexer(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
-    exit_section_(builder_, marker_, JuliaTypes.MULTI_INDEXER, result_);
+    exit_section_(builder_, marker_, MULTI_INDEXER, result_);
     return result_;
   }
 
@@ -1176,14 +1177,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean multiplyLevelOperator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "multiplyLevelOperator")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.MULTIPLY_LEVEL_OPERATOR, "<multiply level operator>");
-    result_ = consumeToken(builder_, JuliaTypes.MULTIPLY_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.DIVIDE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.REMAINDER_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.INVERSE_DIV_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.FACTORISE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_AND_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_MULTIPLY_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, MULTIPLY_LEVEL_OPERATOR, "<multiply level operator>");
+    result_ = consumeToken(builder_, MULTIPLY_SYM);
+    if (!result_) result_ = consumeToken(builder_, DIVIDE_SYM);
+    if (!result_) result_ = consumeToken(builder_, REMAINDER_SYM);
+    if (!result_) result_ = consumeToken(builder_, INVERSE_DIV_SYM);
+    if (!result_) result_ = consumeToken(builder_, FACTORISE_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_AND_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_MULTIPLY_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -1192,15 +1193,15 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // symbol endOfLine EQ_SYM endOfLine expr
   public static boolean namedParameter(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "namedParameter")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = symbol(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.EQ_SYM);
+    result_ = result_ && consumeToken(builder_, EQ_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
-    exit_section_(builder_, marker_, JuliaTypes.NAMED_PARAMETER, result_);
+    exit_section_(builder_, marker_, NAMED_PARAMETER, result_);
     return result_;
   }
 
@@ -1250,49 +1251,49 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean opAsSymbol(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "opAsSymbol")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.OP_AS_SYMBOL, "<op as symbol>");
-    result_ = consumeToken(builder_, JuliaTypes.SEMICOLON_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.QUESTION_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SUBTYPE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.INVERSE_DIV_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.IS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.ISNT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EQ_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.LAMBDA_ABSTRACTION);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.ARROW_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SLICE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.LESS_THAN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.LESS_THAN_OR_EQUAL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.AND_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.OR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.PIPE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.INVRESE_PIPE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SHL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SHR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.USHR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.FRACTION_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.DIVIDE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.REMAINDER_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EXPONENT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MULTIPLY_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.EQUALS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.UNEQUAL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.GREATER_THAN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.GREATER_THAN_OR_EQUAL_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.TRANSPOSE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.IN_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_COMPARISON_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_PLUS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_MULTIPLY_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_EXPONENT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.FACTORISE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_AND_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_OR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_XOR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SPECIAL_ARROW_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_ARROW_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_NOT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.ASSIGN_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, OP_AS_SYMBOL, "<op as symbol>");
+    result_ = consumeToken(builder_, SEMICOLON_SYM);
+    if (!result_) result_ = consumeToken(builder_, QUESTION_SYM);
+    if (!result_) result_ = consumeToken(builder_, SUBTYPE_SYM);
+    if (!result_) result_ = consumeToken(builder_, INVERSE_DIV_SYM);
+    if (!result_) result_ = consumeToken(builder_, IS_SYM);
+    if (!result_) result_ = consumeToken(builder_, ISNT_SYM);
+    if (!result_) result_ = consumeToken(builder_, EQ_SYM);
+    if (!result_) result_ = consumeToken(builder_, LAMBDA_ABSTRACTION);
+    if (!result_) result_ = consumeToken(builder_, ARROW_SYM);
+    if (!result_) result_ = consumeToken(builder_, SLICE_SYM);
+    if (!result_) result_ = consumeToken(builder_, LESS_THAN_SYM);
+    if (!result_) result_ = consumeToken(builder_, LESS_THAN_OR_EQUAL_SYM);
+    if (!result_) result_ = consumeToken(builder_, AND_SYM);
+    if (!result_) result_ = consumeToken(builder_, OR_SYM);
+    if (!result_) result_ = consumeToken(builder_, PIPE_SYM);
+    if (!result_) result_ = consumeToken(builder_, INVRESE_PIPE_SYM);
+    if (!result_) result_ = consumeToken(builder_, SHL_SYM);
+    if (!result_) result_ = consumeToken(builder_, SHR_SYM);
+    if (!result_) result_ = consumeToken(builder_, USHR_SYM);
+    if (!result_) result_ = consumeToken(builder_, FRACTION_SYM);
+    if (!result_) result_ = consumeToken(builder_, DIVIDE_SYM);
+    if (!result_) result_ = consumeToken(builder_, REMAINDER_SYM);
+    if (!result_) result_ = consumeToken(builder_, EXPONENT_SYM);
+    if (!result_) result_ = consumeToken(builder_, MULTIPLY_SYM);
+    if (!result_) result_ = consumeToken(builder_, EQUALS_SYM);
+    if (!result_) result_ = consumeToken(builder_, UNEQUAL_SYM);
+    if (!result_) result_ = consumeToken(builder_, GREATER_THAN_SYM);
+    if (!result_) result_ = consumeToken(builder_, GREATER_THAN_OR_EQUAL_SYM);
+    if (!result_) result_ = consumeToken(builder_, TRANSPOSE_SYM);
+    if (!result_) result_ = consumeToken(builder_, IN_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_COMPARISON_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_PLUS_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_MULTIPLY_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_EXPONENT_SYM);
+    if (!result_) result_ = consumeToken(builder_, FACTORISE_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_AND_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_OR_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_XOR_SYM);
+    if (!result_) result_ = consumeToken(builder_, SPECIAL_ARROW_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_ARROW_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_NOT_SYM);
+    if (!result_) result_ = consumeToken(builder_, ASSIGN_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -1301,11 +1302,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // PIPE_SYM | INVERSE_PIPE_SYM
   public static boolean pipeLevelOperator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "pipeLevelOperator")) return false;
-    if (!nextTokenIs(builder_, "<pipe level operator>", JuliaTypes.INVERSE_PIPE_SYM, JuliaTypes.PIPE_SYM)) return false;
+    if (!nextTokenIs(builder_, "<pipe level operator>", INVERSE_PIPE_SYM, PIPE_SYM)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.PIPE_LEVEL_OPERATOR, "<pipe level operator>");
-    result_ = consumeToken(builder_, JuliaTypes.PIPE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.INVERSE_PIPE_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, PIPE_LEVEL_OPERATOR, "<pipe level operator>");
+    result_ = consumeToken(builder_, PIPE_SYM);
+    if (!result_) result_ = consumeToken(builder_, INVERSE_PIPE_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -1320,13 +1321,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean plusLevelOperator(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "plusLevelOperator")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.PLUS_LEVEL_OPERATOR, "<plus level operator>");
-    result_ = consumeToken(builder_, JuliaTypes.INTERPOLATE_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_XOR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.BITWISE_OR_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.PLUS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MINUS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MISC_PLUS_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, PLUS_LEVEL_OPERATOR, "<plus level operator>");
+    result_ = consumeToken(builder_, INTERPOLATE_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_XOR_SYM);
+    if (!result_) result_ = consumeToken(builder_, BITWISE_OR_SYM);
+    if (!result_) result_ = consumeToken(builder_, PLUS_SYM);
+    if (!result_) result_ = consumeToken(builder_, MINUS_SYM);
+    if (!result_) result_ = consumeToken(builder_, MISC_PLUS_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -1342,36 +1343,10 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     Marker marker_ = enter_section_(builder_);
     result_ = unaryOpAsSymbol(builder_, level_ + 1);
     if (!result_) result_ = opAsSymbol(builder_, level_ + 1);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.QUOTE_KEYWORD);
+    if (!result_) result_ = consumeToken(builder_, QUOTE_KEYWORD);
     if (!result_) result_ = expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
-  }
-
-  /* ********************************************************** */
-  // TRIPLE_QUOTE_START stringTemplateElement* TRIPLE_QUOTE_END
-  static boolean rawStr(PsiBuilder builder_, int level_) {
-    if (!recursion_guard_(builder_, level_, "rawStr")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.TRIPLE_QUOTE_START)) return false;
-    boolean result_;
-    Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.TRIPLE_QUOTE_START);
-    result_ = result_ && rawStr_1(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.TRIPLE_QUOTE_END);
-    exit_section_(builder_, marker_, null, result_);
-    return result_;
-  }
-
-  // stringTemplateElement*
-  private static boolean rawStr_1(PsiBuilder builder_, int level_) {
-    if (!recursion_guard_(builder_, level_, "rawStr_1")) return false;
-    int pos_ = current_position_(builder_);
-    while (true) {
-      if (!stringTemplateElement(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "rawStr_1", pos_)) break;
-      pos_ = current_position_(builder_);
-    }
-    return true;
   }
 
   /* ********************************************************** */
@@ -1381,7 +1356,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = endOfLineImpl(builder_, level_ + 1);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.SEMICOLON_SYM);
+    if (!result_) result_ = consumeToken(builder_, SEMICOLON_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -1390,9 +1365,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // indexer (IF_KEYWORD expr)?
   public static boolean singleComprehension(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "singleComprehension")) return false;
-    if (!nextTokenIs(builder_, "<single comprehension>", JuliaTypes.LEFT_BRACKET, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, "<single comprehension>", LEFT_BRACKET, SYM)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.SINGLE_COMPREHENSION, "<single comprehension>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, SINGLE_COMPREHENSION, "<single comprehension>");
     result_ = indexer(builder_, level_ + 1);
     result_ = result_ && singleComprehension_1(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
@@ -1411,7 +1386,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "singleComprehension_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.IF_KEYWORD);
+    result_ = consumeToken(builder_, IF_KEYWORD);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -1421,15 +1396,41 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // symbol infixIndexer endOfLine expr
   public static boolean singleIndexer(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "singleIndexer")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = symbol(builder_, level_ + 1);
     result_ = result_ && infixIndexer(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
-    exit_section_(builder_, marker_, JuliaTypes.SINGLE_INDEXER, result_);
+    exit_section_(builder_, marker_, SINGLE_INDEXER, result_);
     return result_;
+  }
+
+  /* ********************************************************** */
+  // QUOTE_START stringTemplateElement* QUOTE_END
+  static boolean singleQuoteString(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "singleQuoteString")) return false;
+    if (!nextTokenIs(builder_, QUOTE_START)) return false;
+    boolean result_;
+    Marker marker_ = enter_section_(builder_);
+    result_ = consumeToken(builder_, QUOTE_START);
+    result_ = result_ && singleQuoteString_1(builder_, level_ + 1);
+    result_ = result_ && consumeToken(builder_, QUOTE_END);
+    exit_section_(builder_, marker_, null, result_);
+    return result_;
+  }
+
+  // stringTemplateElement*
+  private static boolean singleQuoteString_1(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "singleQuoteString_1")) return false;
+    int pos_ = current_position_(builder_);
+    while (true) {
+      if (!stringTemplateElement(builder_, level_ + 1)) break;
+      if (!empty_element_parsed_guard_(builder_, "singleQuoteString_1", pos_)) break;
+      pos_ = current_position_(builder_);
+    }
+    return true;
   }
 
   /* ********************************************************** */
@@ -1504,7 +1505,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "statement_2_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.COMMA_SYM);
+    result_ = consumeToken(builder_, COMMA_SYM);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -1515,7 +1516,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean statements(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "statements")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.STATEMENTS, "<statements>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, STATEMENTS, "<statements>");
     result_ = statements_0(builder_, level_ + 1);
     result_ = result_ && statements_1(builder_, level_ + 1);
     result_ = result_ && statements_2(builder_, level_ + 1);
@@ -1605,40 +1606,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // QUOTE_START stringTemplateElement* QUOTE_END
-  static boolean str(PsiBuilder builder_, int level_) {
-    if (!recursion_guard_(builder_, level_, "str")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.QUOTE_START)) return false;
-    boolean result_;
-    Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.QUOTE_START);
-    result_ = result_ && str_1(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.QUOTE_END);
-    exit_section_(builder_, marker_, null, result_);
-    return result_;
-  }
-
-  // stringTemplateElement*
-  private static boolean str_1(PsiBuilder builder_, int level_) {
-    if (!recursion_guard_(builder_, level_, "str_1")) return false;
-    int pos_ = current_position_(builder_);
-    while (true) {
-      if (!stringTemplateElement(builder_, level_ + 1)) break;
-      if (!empty_element_parsed_guard_(builder_, "str_1", pos_)) break;
-      pos_ = current_position_(builder_);
-    }
-    return true;
-  }
-
-  /* ********************************************************** */
   // REGULAR_STRING_PART_LITERAL
   public static boolean stringContent(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "stringContent")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.REGULAR_STRING_PART_LITERAL)) return false;
+    if (!nextTokenIs(builder_, REGULAR_STRING_PART_LITERAL)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.REGULAR_STRING_PART_LITERAL);
-    exit_section_(builder_, marker_, JuliaTypes.STRING_CONTENT, result_);
+    result_ = consumeToken(builder_, REGULAR_STRING_PART_LITERAL);
+    exit_section_(builder_, marker_, STRING_CONTENT, result_);
     return result_;
   }
 
@@ -1651,8 +1626,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "stringTemplateElement")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.STRING_UNICODE);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.STRING_ESCAPE);
+    result_ = consumeToken(builder_, STRING_UNICODE);
+    if (!result_) result_ = consumeToken(builder_, STRING_ESCAPE);
     if (!result_) result_ = template(builder_, level_ + 1);
     if (!result_) result_ = stringContent(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
@@ -1663,7 +1638,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // symbol | macroSymbol
   static boolean symbolAndMacroSymbol(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "symbolAndMacroSymbol")) return false;
-    if (!nextTokenIs(builder_, "", JuliaTypes.MACRO_SYM, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, "", MACRO_SYM, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = symbol(builder_, level_ + 1);
@@ -1676,7 +1651,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // symbol | LEFT_BRACKET symbol RIGHT_BRACKET
   static boolean symbolLhsInternal(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "symbolLhsInternal")) return false;
-    if (!nextTokenIs(builder_, "", JuliaTypes.LEFT_BRACKET, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, "", LEFT_BRACKET, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = symbol(builder_, level_ + 1);
@@ -1690,9 +1665,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "symbolLhsInternal_1")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.LEFT_BRACKET);
+    result_ = consumeToken(builder_, LEFT_BRACKET);
     result_ = result_ && symbol(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -1701,9 +1676,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // SHORT_INTERPOLATE_SYM symbol | STRING_INTERPOLATE_START expr STRING_INTERPOLATE_END
   public static boolean template(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "template")) return false;
-    if (!nextTokenIs(builder_, "<template>", JuliaTypes.SHORT_INTERPOLATE_SYM, JuliaTypes.STRING_INTERPOLATE_START)) return false;
+    if (!nextTokenIs(builder_, "<template>", SHORT_INTERPOLATE_SYM, STRING_INTERPOLATE_START)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.TEMPLATE, "<template>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, TEMPLATE, "<template>");
     result_ = template_0(builder_, level_ + 1);
     if (!result_) result_ = template_1(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
@@ -1715,7 +1690,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "template_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.SHORT_INTERPOLATE_SYM);
+    result_ = consumeToken(builder_, SHORT_INTERPOLATE_SYM);
     result_ = result_ && symbol(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -1726,11 +1701,37 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "template_1")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.STRING_INTERPOLATE_START);
+    result_ = consumeToken(builder_, STRING_INTERPOLATE_START);
     result_ = result_ && expr(builder_, level_ + 1, -1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.STRING_INTERPOLATE_END);
+    result_ = result_ && consumeToken(builder_, STRING_INTERPOLATE_END);
     exit_section_(builder_, marker_, null, result_);
     return result_;
+  }
+
+  /* ********************************************************** */
+  // TRIPLE_QUOTE_START stringTemplateElement* TRIPLE_QUOTE_END
+  static boolean tripleQuoteString(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "tripleQuoteString")) return false;
+    if (!nextTokenIs(builder_, TRIPLE_QUOTE_START)) return false;
+    boolean result_;
+    Marker marker_ = enter_section_(builder_);
+    result_ = consumeToken(builder_, TRIPLE_QUOTE_START);
+    result_ = result_ && tripleQuoteString_1(builder_, level_ + 1);
+    result_ = result_ && consumeToken(builder_, TRIPLE_QUOTE_END);
+    exit_section_(builder_, marker_, null, result_);
+    return result_;
+  }
+
+  // stringTemplateElement*
+  private static boolean tripleQuoteString_1(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "tripleQuoteString_1")) return false;
+    int pos_ = current_position_(builder_);
+    while (true) {
+      if (!stringTemplateElement(builder_, level_ + 1)) break;
+      if (!empty_element_parsed_guard_(builder_, "tripleQuoteString_1", pos_)) break;
+      pos_ = current_position_(builder_);
+    }
+    return true;
   }
 
   /* ********************************************************** */
@@ -1739,15 +1740,15 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  typeParameters?
   public static boolean typeAnnotation(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "typeAnnotation")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.DOUBLE_COLON)) return false;
+    if (!nextTokenIs(builder_, DOUBLE_COLON)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.DOUBLE_COLON);
+    result_ = consumeToken(builder_, DOUBLE_COLON);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, 19);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && typeAnnotation_4(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.TYPE_ANNOTATION, result_);
+    exit_section_(builder_, marker_, TYPE_ANNOTATION, result_);
     return result_;
   }
 
@@ -1762,11 +1763,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // IMMUTABLE_KEYWORD | MUTABLE_KEYWORD
   static boolean typeModifiers(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "typeModifiers")) return false;
-    if (!nextTokenIs(builder_, "", JuliaTypes.IMMUTABLE_KEYWORD, JuliaTypes.MUTABLE_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, "", IMMUTABLE_KEYWORD, MUTABLE_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.IMMUTABLE_KEYWORD);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.MUTABLE_KEYWORD);
+    result_ = consumeToken(builder_, IMMUTABLE_KEYWORD);
+    if (!result_) result_ = consumeToken(builder_, MUTABLE_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -1777,16 +1778,16 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_B_BRACKET
   public static boolean typeParameters(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "typeParameters")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.LEFT_B_BRACKET)) return false;
+    if (!nextTokenIs(builder_, LEFT_B_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.LEFT_B_BRACKET);
+    result_ = consumeToken(builder_, LEFT_B_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && typeParameters_2(builder_, level_ + 1);
     result_ = result_ && typeParameters_3(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_B_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.TYPE_PARAMETERS, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_B_BRACKET);
+    exit_section_(builder_, marker_, TYPE_PARAMETERS, result_);
     return result_;
   }
 
@@ -1834,9 +1835,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  ) (EQ_SYM expr)?
   public static boolean typedNamedVariable(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "typedNamedVariable")) return false;
-    if (!nextTokenIs(builder_, "<typed named variable>", JuliaTypes.DOUBLE_COLON, JuliaTypes.SYM)) return false;
+    if (!nextTokenIs(builder_, "<typed named variable>", DOUBLE_COLON, SYM)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.TYPED_NAMED_VARIABLE, "<typed named variable>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, TYPED_NAMED_VARIABLE, "<typed named variable>");
     result_ = typedNamedVariable_0(builder_, level_ + 1);
     result_ = result_ && typedNamedVariable_1(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
@@ -1903,7 +1904,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "typedNamedVariable_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.EQ_SYM);
+    result_ = consumeToken(builder_, EQ_SYM);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -1918,12 +1919,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean unaryOpAsSymbol(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "unaryOpAsSymbol")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.UNARY_OP_AS_SYMBOL, "<unary op as symbol>");
-    result_ = consumeToken(builder_, JuliaTypes.MINUS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.DOT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.PLUS_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.NOT_SYM);
-    if (!result_) result_ = consumeToken(builder_, JuliaTypes.INTERPOLATE_SYM);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, UNARY_OP_AS_SYMBOL, "<unary op as symbol>");
+    result_ = consumeToken(builder_, MINUS_SYM);
+    if (!result_) result_ = consumeToken(builder_, DOT_SYM);
+    if (!result_) result_ = consumeToken(builder_, PLUS_SYM);
+    if (!result_) result_ = consumeToken(builder_, NOT_SYM);
+    if (!result_) result_ = consumeToken(builder_, INTERPOLATE_SYM);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -1934,15 +1935,15 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_BRACKET
   public static boolean untypedVariables(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "untypedVariables")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.LEFT_BRACKET)) return false;
+    if (!nextTokenIs(builder_, LEFT_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.LEFT_BRACKET);
+    result_ = consumeToken(builder_, LEFT_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && untypedVariables_2(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.UNTYPED_VARIABLES, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
+    exit_section_(builder_, marker_, UNTYPED_VARIABLES, result_);
     return result_;
   }
 
@@ -1992,7 +1993,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean userType(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "userType")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.USER_TYPE, "<user type>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, USER_TYPE, "<user type>");
     result_ = expr(builder_, level_ + 1, 19);
     result_ = result_ && userType_1(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
@@ -2010,12 +2011,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // WHERE_KEYWORD afterWhere
   public static boolean whereClause(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "whereClause")) return false;
-    if (!nextTokenIs(builder_, JuliaTypes.WHERE_KEYWORD)) return false;
+    if (!nextTokenIs(builder_, WHERE_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeToken(builder_, JuliaTypes.WHERE_KEYWORD);
+    result_ = consumeToken(builder_, WHERE_KEYWORD);
     result_ = result_ && afterWhere(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.WHERE_CLAUSE, result_);
+    exit_section_(builder_, marker_, WHERE_CLAUSE, result_);
     return result_;
   }
 
@@ -2044,15 +2045,16 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //    PREFIX(unaryInterpolateOp) PREFIX(notOp) PREFIX(bitWiseNotOp)
   // 19: POSTFIX(applyFunctionOp) POSTFIX(applyIndexOp) BINARY(memberAccessOp) POSTFIX(applyWhereOp)
   //    POSTFIX(type)
-  // 20: ATOM(string) ATOM(command) ATOM(regex) ATOM(charLit)
-  //    ATOM(integer) ATOM(floatLit) ATOM(booleanLit) PREFIX(ifExpr)
-  //    ATOM(forExpr) ATOM(forComprehension) PREFIX(whileExpr) PREFIX(function)
-  //    ATOM(returnExpr) ATOM(breakExpr) ATOM(tryCatch) ATOM(continueExpr)
-  //    ATOM(array) PREFIX(union) ATOM(tuple) PREFIX(macro)
-  //    ATOM(let) ATOM(block) ATOM(colonBlock) ATOM(export)
-  //    ATOM(importExpr) ATOM(importAllExpr) ATOM(using) ATOM(abstractTypeDeclaration)
-  //    ATOM(primitiveTypeDeclaration) ATOM(typeDeclaration) PREFIX(typeAlias) ATOM(symbolLhs)
-  //    ATOM(symbol) ATOM(inAsOp) ATOM(macroSymbol) ATOM(bracketedExpr)
+  // 20: ATOM(string) ATOM(command) ATOM(regex) ATOM(rawString)
+  //    ATOM(versionNumber) ATOM(byteArray) ATOM(charLit) ATOM(integer)
+  //    ATOM(floatLit) ATOM(booleanLit) PREFIX(ifExpr) ATOM(forExpr)
+  //    ATOM(forComprehension) PREFIX(whileExpr) PREFIX(function) ATOM(returnExpr)
+  //    ATOM(breakExpr) ATOM(tryCatch) ATOM(continueExpr) ATOM(array)
+  //    PREFIX(union) ATOM(tuple) PREFIX(macro) ATOM(let)
+  //    ATOM(block) ATOM(colonBlock) ATOM(export) ATOM(importExpr)
+  //    ATOM(importAllExpr) ATOM(using) ATOM(abstractTypeDeclaration) ATOM(primitiveTypeDeclaration)
+  //    ATOM(typeDeclaration) PREFIX(typeAlias) ATOM(symbolLhs) ATOM(symbol)
+  //    ATOM(inAsOp) ATOM(macroSymbol) ATOM(bracketedExpr)
   public static boolean expr(PsiBuilder builder_, int level_, int priority_) {
     if (!recursion_guard_(builder_, level_, "expr")) return false;
     addVariant(builder_, "<expr>");
@@ -2073,6 +2075,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!result_) result_ = string(builder_, level_ + 1);
     if (!result_) result_ = command(builder_, level_ + 1);
     if (!result_) result_ = regex(builder_, level_ + 1);
+    if (!result_) result_ = rawString(builder_, level_ + 1);
+    if (!result_) result_ = versionNumber(builder_, level_ + 1);
+    if (!result_) result_ = byteArray(builder_, level_ + 1);
     if (!result_) result_ = charLit(builder_, level_ + 1);
     if (!result_) result_ = integer(builder_, level_ + 1);
     if (!result_) result_ = floatLit(builder_, level_ + 1);
@@ -2117,114 +2122,114 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     boolean result_ = true;
     while (true) {
       Marker marker_ = enter_section_(builder_, level_, _LEFT_, null);
-      if (priority_ < 0 && leftMarkerIs(builder_, JuliaTypes.SYMBOL) && compactFunction_0(builder_, level_ + 1)) {
+      if (priority_ < 0 && leftMarkerIs(builder_, SYMBOL) && compactFunction_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 0);
-        exit_section_(builder_, level_, marker_, JuliaTypes.COMPACT_FUNCTION, result_, true, null);
+        exit_section_(builder_, level_, marker_, COMPACT_FUNCTION, result_, true, null);
       }
       else if (priority_ < 2 && assignOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 1);
-        exit_section_(builder_, level_, marker_, JuliaTypes.ASSIGN_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, ASSIGN_OP, result_, true, null);
       }
       else if (priority_ < 2 && assignLevelOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 1);
-        exit_section_(builder_, level_, marker_, JuliaTypes.ASSIGN_LEVEL_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, ASSIGN_LEVEL_OP, result_, true, null);
       }
       else if (priority_ < 3 && arrowOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 2);
-        exit_section_(builder_, level_, marker_, JuliaTypes.ARROW_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, ARROW_OP, result_, true, null);
       }
       else if (priority_ < 4 && ternaryOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 12);
-        exit_section_(builder_, level_, marker_, JuliaTypes.TERNARY_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, TERNARY_OP, result_, true, null);
       }
       else if (priority_ < 6 && miscArrowsOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 6);
-        exit_section_(builder_, level_, marker_, JuliaTypes.MISC_ARROWS_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, MISC_ARROWS_OP, result_, true, null);
       }
       else if (priority_ < 7 && orOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 7);
-        exit_section_(builder_, level_, marker_, JuliaTypes.OR_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, OR_OP, result_, true, null);
       }
       else if (priority_ < 8 && andOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 8);
-        exit_section_(builder_, level_, marker_, JuliaTypes.AND_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, AND_OP, result_, true, null);
       }
       else if (priority_ < 9 && comparisonLevelOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 9);
-        exit_section_(builder_, level_, marker_, JuliaTypes.COMPARISON_LEVEL_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, COMPARISON_LEVEL_OP, result_, true, null);
       }
       else if (priority_ < 10 && pipeLevelOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 10);
-        exit_section_(builder_, level_, marker_, JuliaTypes.PIPE_LEVEL_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, PIPE_LEVEL_OP, result_, true, null);
       }
-      else if (priority_ < 11 && consumeTokenSmart(builder_, JuliaTypes.SLICE_SYM)) {
+      else if (priority_ < 11 && consumeTokenSmart(builder_, SLICE_SYM)) {
         result_ = true;
-        exit_section_(builder_, level_, marker_, JuliaTypes.SPLICE_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, SPLICE_OP, result_, true, null);
       }
       else if (priority_ < 11 && colonSymBegins(builder_, level_ + 1)) {
         result_ = report_error_(builder_, expr(builder_, level_, 11));
-        result_ = consumeToken(builder_, JuliaTypes.RIGHT_BRACKET) && result_;
-        exit_section_(builder_, level_, marker_, JuliaTypes.COLON_OP, result_, true, null);
+        result_ = consumeToken(builder_, RIGHT_BRACKET) && result_;
+        exit_section_(builder_, level_, marker_, COLON_OP, result_, true, null);
       }
       else if (priority_ < 12 && plusLevelOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 12);
-        exit_section_(builder_, level_, marker_, JuliaTypes.PLUS_LEVEL_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, PLUS_LEVEL_OP, result_, true, null);
       }
       else if (priority_ < 13 && bitwiseLevelOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 13);
-        exit_section_(builder_, level_, marker_, JuliaTypes.BITWISE_LEVEL_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, BITWISE_LEVEL_OP, result_, true, null);
       }
       else if (priority_ < 13 && rangeOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 13);
-        exit_section_(builder_, level_, marker_, JuliaTypes.RANGE_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, RANGE_OP, result_, true, null);
       }
-      else if (priority_ < 13 && consumeTokenSmart(builder_, JuliaTypes.TRANSPOSE_SYM)) {
+      else if (priority_ < 13 && consumeTokenSmart(builder_, TRANSPOSE_SYM)) {
         result_ = true;
-        exit_section_(builder_, level_, marker_, JuliaTypes.TRANSPOSE_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, TRANSPOSE_OP, result_, true, null);
       }
       else if (priority_ < 14 && multiplyLevelOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 14);
-        exit_section_(builder_, level_, marker_, JuliaTypes.MULTIPLY_LEVEL_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, MULTIPLY_LEVEL_OP, result_, true, null);
       }
       else if (priority_ < 15 && fractionOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 15);
-        exit_section_(builder_, level_, marker_, JuliaTypes.FRACTION_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, FRACTION_OP, result_, true, null);
       }
       else if (priority_ < 15 && inOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 15);
-        exit_section_(builder_, level_, marker_, JuliaTypes.IN_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, IN_OP, result_, true, null);
       }
       else if (priority_ < 16 && miscExponentOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 16);
-        exit_section_(builder_, level_, marker_, JuliaTypes.MISC_EXPONENT_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, MISC_EXPONENT_OP, result_, true, null);
       }
       else if (priority_ < 16 && exponentOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 16);
-        exit_section_(builder_, level_, marker_, JuliaTypes.EXPONENT_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, EXPONENT_OP, result_, true, null);
       }
       else if (priority_ < 17 && typeOp_0(builder_, level_ + 1)) {
         result_ = expr(builder_, level_, 17);
-        exit_section_(builder_, level_, marker_, JuliaTypes.TYPE_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, TYPE_OP, result_, true, null);
       }
       else if (priority_ < 19 && applyFunctionOp_0(builder_, level_ + 1)) {
         result_ = true;
-        exit_section_(builder_, level_, marker_, JuliaTypes.APPLY_FUNCTION_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, APPLY_FUNCTION_OP, result_, true, null);
       }
       else if (priority_ < 19 && applyIndexOp_0(builder_, level_ + 1)) {
         result_ = true;
-        exit_section_(builder_, level_, marker_, JuliaTypes.APPLY_INDEX_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, APPLY_INDEX_OP, result_, true, null);
       }
-      else if (priority_ < 19 && consumeTokenSmart(builder_, JuliaTypes.DOT_SYM)) {
+      else if (priority_ < 19 && consumeTokenSmart(builder_, DOT_SYM)) {
         result_ = expr(builder_, level_, 19);
-        exit_section_(builder_, level_, marker_, JuliaTypes.MEMBER_ACCESS_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, MEMBER_ACCESS_OP, result_, true, null);
       }
       else if (priority_ < 19 && whereClause(builder_, level_ + 1)) {
         result_ = true;
-        exit_section_(builder_, level_, marker_, JuliaTypes.APPLY_WHERE_OP, result_, true, null);
+        exit_section_(builder_, level_, marker_, APPLY_WHERE_OP, result_, true, null);
       }
       else if (priority_ < 19 && typeParameters(builder_, level_ + 1)) {
         result_ = true;
-        exit_section_(builder_, level_, marker_, JuliaTypes.TYPE, result_, true, null);
+        exit_section_(builder_, level_, marker_, TYPE, result_, true, null);
       }
       else {
         exit_section_(builder_, level_, marker_, null, false, false, null);
@@ -2243,7 +2248,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     result_ = result_ && functionSignature(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && compactFunction_0_3(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.EQ_SYM);
+    result_ = result_ && consumeToken(builder_, EQ_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2288,9 +2293,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // macroSymbol expr expr*
   public static boolean applyMacroOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "applyMacroOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.MACRO_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, MACRO_SYM)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _COLLAPSE_, JuliaTypes.APPLY_MACRO_OP, null);
+    Marker marker_ = enter_section_(builder_, level_, _COLLAPSE_, APPLY_MACRO_OP, null);
     result_ = macroSymbol(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     result_ = result_ && applyMacroOp_2(builder_, level_ + 1);
@@ -2326,8 +2331,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "assignOp_0_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.EQ_SYM);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.ASSIGN_SYM);
+    result_ = consumeTokenSmart(builder_, EQ_SYM);
+    if (!result_) result_ = consumeTokenSmart(builder_, ASSIGN_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -2348,7 +2353,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "arrowOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.ARROW_SYM);
+    result_ = consumeTokenSmart(builder_, ARROW_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2359,7 +2364,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "ternaryOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.QUESTION_SYM);
+    result_ = consumeTokenSmart(builder_, QUESTION_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2369,11 +2374,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //   LAMBDA_ABSTRACTION expr
   public static boolean lambda(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "lambda")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.LEFT_BRACKET, JuliaTypes.SYM)) return false;
+    if (!nextTokenIsSmart(builder_, LEFT_BRACKET, SYM)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.LAMBDA, "<lambda>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, LAMBDA, "<lambda>");
     result_ = lambda_0(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.LAMBDA_ABSTRACTION);
+    result_ = result_ && consumeToken(builder_, LAMBDA_ABSTRACTION);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
@@ -2386,7 +2391,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     Marker marker_ = enter_section_(builder_);
     result_ = symbol(builder_, level_ + 1);
     if (!result_) result_ = tuple(builder_, level_ + 1);
-    if (!result_) result_ = parseTokensSmart(builder_, 0, JuliaTypes.LEFT_BRACKET, JuliaTypes.RIGHT_BRACKET);
+    if (!result_) result_ = parseTokensSmart(builder_, 0, LEFT_BRACKET, RIGHT_BRACKET);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -2407,8 +2412,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "miscArrowsOp_0_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SPECIAL_ARROW_SYM);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.MISC_ARROW_SYM);
+    result_ = consumeTokenSmart(builder_, SPECIAL_ARROW_SYM);
+    if (!result_) result_ = consumeTokenSmart(builder_, MISC_ARROW_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -2418,7 +2423,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "orOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.OR_SYM);
+    result_ = consumeTokenSmart(builder_, OR_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2429,7 +2434,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "andOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.AND_SYM);
+    result_ = consumeTokenSmart(builder_, AND_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2460,27 +2465,27 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // COLON_SYM endOfLine quotable
   public static boolean quoteOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "quoteOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.COLON_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, COLON_SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.COLON_SYM);
+    result_ = consumeTokenSmart(builder_, COLON_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && quotable(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.QUOTE_OP, result_);
+    exit_section_(builder_, marker_, QUOTE_OP, result_);
     return result_;
   }
 
   // QUOTE_KEYWORD endOfLine (expr endOfLine)* END_KEYWORD
   public static boolean compoundQuoteOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "compoundQuoteOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.QUOTE_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, QUOTE_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.QUOTE_KEYWORD);
+    result_ = consumeTokenSmart(builder_, QUOTE_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && compoundQuoteOp_2(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.COMPOUND_QUOTE_OP, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, COMPOUND_QUOTE_OP, result_);
     return result_;
   }
 
@@ -2534,7 +2539,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "rangeOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.COLON_SYM);
+    result_ = consumeTokenSmart(builder_, COLON_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2555,10 +2560,10 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean implicitMultiplyOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "implicitMultiplyOp")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _COLLAPSE_, JuliaTypes.IMPLICIT_MULTIPLY_OP, "<implicit multiply op>");
+    Marker marker_ = enter_section_(builder_, level_, _COLLAPSE_, IMPLICIT_MULTIPLY_OP, "<implicit multiply op>");
     result_ = specialLhs(builder_, level_ + 1);
     result_ = result_ && implicitMultiplyOp_1(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.IMPLICIT_MULTIPLY_SYM);
+    result_ = result_ && consumeToken(builder_, IMPLICIT_MULTIPLY_SYM);
     result_ = result_ && specialRhs(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
@@ -2576,7 +2581,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "fractionOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.FRACTION_SYM);
+    result_ = consumeTokenSmart(builder_, FRACTION_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2598,8 +2603,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "inOp_0_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.IN_KEYWORD);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.IN_SYM);
+    result_ = consumeTokenSmart(builder_, IN_KEYWORD);
+    if (!result_) result_ = consumeTokenSmart(builder_, IN_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -2609,7 +2614,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "miscExponentOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.MISC_EXPONENT_SYM);
+    result_ = consumeTokenSmart(builder_, MISC_EXPONENT_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2620,7 +2625,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "exponentOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.EXPONENT_SYM);
+    result_ = consumeTokenSmart(builder_, EXPONENT_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2631,7 +2636,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "typeOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.DOUBLE_COLON);
+    result_ = consumeTokenSmart(builder_, DOUBLE_COLON);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2639,13 +2644,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean unaryPlusOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "unaryPlusOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.PLUS_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, PLUS_SYM)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = unaryPlusOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.UNARY_PLUS_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, UNARY_PLUS_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2654,7 +2659,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "unaryPlusOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.PLUS_SYM);
+    result_ = consumeTokenSmart(builder_, PLUS_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2662,13 +2667,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean unaryMinusOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "unaryMinusOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.MINUS_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, MINUS_SYM)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = unaryMinusOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.UNARY_MINUS_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, UNARY_MINUS_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2677,7 +2682,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "unaryMinusOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.MINUS_SYM);
+    result_ = consumeTokenSmart(builder_, MINUS_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2685,13 +2690,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean unaryTypeOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "unaryTypeOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.DOUBLE_COLON)) return false;
+    if (!nextTokenIsSmart(builder_, DOUBLE_COLON)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = unaryTypeOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.UNARY_TYPE_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, UNARY_TYPE_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2700,7 +2705,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "unaryTypeOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.DOUBLE_COLON);
+    result_ = consumeTokenSmart(builder_, DOUBLE_COLON);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2708,13 +2713,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean unarySubtypeOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "unarySubtypeOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.SUBTYPE_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, SUBTYPE_SYM)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = unarySubtypeOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.UNARY_SUBTYPE_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, UNARY_SUBTYPE_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2723,7 +2728,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "unarySubtypeOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SUBTYPE_SYM);
+    result_ = consumeTokenSmart(builder_, SUBTYPE_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2731,13 +2736,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean unaryInterpolateOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "unaryInterpolateOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.INTERPOLATE_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, INTERPOLATE_SYM)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = unaryInterpolateOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.UNARY_INTERPOLATE_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, UNARY_INTERPOLATE_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2746,7 +2751,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "unaryInterpolateOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.INTERPOLATE_SYM);
+    result_ = consumeTokenSmart(builder_, INTERPOLATE_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2754,13 +2759,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean notOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "notOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.NOT_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, NOT_SYM)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = notOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.NOT_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, NOT_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2769,7 +2774,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "notOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.NOT_SYM);
+    result_ = consumeTokenSmart(builder_, NOT_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2777,13 +2782,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean bitWiseNotOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "bitWiseNotOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.BITWISE_NOT_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, BITWISE_NOT_SYM)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = bitWiseNotOp_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 18);
-    exit_section_(builder_, level_, marker_, JuliaTypes.BIT_WISE_NOT_OP, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, BIT_WISE_NOT_OP, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -2792,7 +2797,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "bitWiseNotOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.BITWISE_NOT_SYM);
+    result_ = consumeTokenSmart(builder_, BITWISE_NOT_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2807,12 +2812,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = applyFunctionOp_0_0(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.LEFT_BRACKET);
+    result_ = result_ && consumeToken(builder_, LEFT_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && applyFunctionOp_0_3(builder_, level_ + 1);
     result_ = result_ && applyFunctionOp_0_4(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
     result_ = result_ && applyFunctionOp_0_7(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -2821,7 +2826,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // DOT_SYM?
   private static boolean applyFunctionOp_0_0(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "applyFunctionOp_0_0")) return false;
-    consumeTokenSmart(builder_, JuliaTypes.DOT_SYM);
+    consumeTokenSmart(builder_, DOT_SYM);
     return true;
   }
 
@@ -2896,10 +2901,10 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "applyIndexOp_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LEFT_M_BRACKET);
+    result_ = consumeTokenSmart(builder_, LEFT_M_BRACKET);
     result_ = result_ && applyIndexOp_0_1(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_M_BRACKET);
+    result_ = result_ && consumeToken(builder_, RIGHT_M_BRACKET);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -2954,20 +2959,20 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "applyIndexOp_0_1_0_1_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.COMMA_SYM);
+    result_ = consumeTokenSmart(builder_, COMMA_SYM);
     result_ = result_ && exprOrEnd(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
 
-  // str | rawStr
+  // singleQuoteString | tripleQuoteString
   public static boolean string(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "string")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.QUOTE_START, JuliaTypes.TRIPLE_QUOTE_START)) return false;
+    if (!nextTokenIsSmart(builder_, QUOTE_START, TRIPLE_QUOTE_START)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.STRING, "<string>");
-    result_ = str(builder_, level_ + 1);
-    if (!result_) result_ = rawStr(builder_, level_ + 1);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, STRING, "<string>");
+    result_ = singleQuoteString(builder_, level_ + 1);
+    if (!result_) result_ = tripleQuoteString(builder_, level_ + 1);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -2975,13 +2980,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // CMD_QUOTE_START stringTemplateElement* CMD_QUOTE_END
   public static boolean command(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "command")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.CMD_QUOTE_START)) return false;
+    if (!nextTokenIsSmart(builder_, CMD_QUOTE_START)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.CMD_QUOTE_START);
+    result_ = consumeTokenSmart(builder_, CMD_QUOTE_START);
     result_ = result_ && command_1(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.CMD_QUOTE_END);
-    exit_section_(builder_, marker_, JuliaTypes.COMMAND, result_);
+    result_ = result_ && consumeToken(builder_, CMD_QUOTE_END);
+    exit_section_(builder_, marker_, COMMAND, result_);
     return result_;
   }
 
@@ -3000,13 +3005,13 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // REGEX_START (stringContent | STRING_ESCAPE)* REGEX_END
   public static boolean regex(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "regex")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.REGEX_START)) return false;
+    if (!nextTokenIsSmart(builder_, REGEX_START)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.REGEX_START);
+    result_ = consumeTokenSmart(builder_, REGEX_START);
     result_ = result_ && regex_1(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.REGEX_END);
-    exit_section_(builder_, marker_, JuliaTypes.REGEX, result_);
+    result_ = result_ && consumeToken(builder_, REGEX_END);
+    exit_section_(builder_, marker_, REGEX, result_);
     return result_;
   }
 
@@ -3028,7 +3033,96 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     boolean result_;
     Marker marker_ = enter_section_(builder_);
     result_ = stringContent(builder_, level_ + 1);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.STRING_ESCAPE);
+    if (!result_) result_ = consumeTokenSmart(builder_, STRING_ESCAPE);
+    exit_section_(builder_, marker_, null, result_);
+    return result_;
+  }
+
+  // RAW_STR_START stringContent* RAW_STR_END
+  public static boolean rawString(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "rawString")) return false;
+    if (!nextTokenIsSmart(builder_, RAW_STR_START)) return false;
+    boolean result_;
+    Marker marker_ = enter_section_(builder_);
+    result_ = consumeTokenSmart(builder_, RAW_STR_START);
+    result_ = result_ && rawString_1(builder_, level_ + 1);
+    result_ = result_ && consumeToken(builder_, RAW_STR_END);
+    exit_section_(builder_, marker_, RAW_STRING, result_);
+    return result_;
+  }
+
+  // stringContent*
+  private static boolean rawString_1(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "rawString_1")) return false;
+    int pos_ = current_position_(builder_);
+    while (true) {
+      if (!stringContent(builder_, level_ + 1)) break;
+      if (!empty_element_parsed_guard_(builder_, "rawString_1", pos_)) break;
+      pos_ = current_position_(builder_);
+    }
+    return true;
+  }
+
+  // VERSION_START stringContent* VERSION_END
+  public static boolean versionNumber(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "versionNumber")) return false;
+    if (!nextTokenIsSmart(builder_, VERSION_START)) return false;
+    boolean result_;
+    Marker marker_ = enter_section_(builder_);
+    result_ = consumeTokenSmart(builder_, VERSION_START);
+    result_ = result_ && versionNumber_1(builder_, level_ + 1);
+    result_ = result_ && consumeToken(builder_, VERSION_END);
+    exit_section_(builder_, marker_, VERSION_NUMBER, result_);
+    return result_;
+  }
+
+  // stringContent*
+  private static boolean versionNumber_1(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "versionNumber_1")) return false;
+    int pos_ = current_position_(builder_);
+    while (true) {
+      if (!stringContent(builder_, level_ + 1)) break;
+      if (!empty_element_parsed_guard_(builder_, "versionNumber_1", pos_)) break;
+      pos_ = current_position_(builder_);
+    }
+    return true;
+  }
+
+  // BYTE_ARRAY_START
+  //   (stringContent | STRING_UNICODE | STRING_ESCAPE)*
+  //  BYTE_ARRAY_END
+  public static boolean byteArray(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "byteArray")) return false;
+    if (!nextTokenIsSmart(builder_, BYTE_ARRAY_START)) return false;
+    boolean result_;
+    Marker marker_ = enter_section_(builder_);
+    result_ = consumeTokenSmart(builder_, BYTE_ARRAY_START);
+    result_ = result_ && byteArray_1(builder_, level_ + 1);
+    result_ = result_ && consumeToken(builder_, BYTE_ARRAY_END);
+    exit_section_(builder_, marker_, BYTE_ARRAY, result_);
+    return result_;
+  }
+
+  // (stringContent | STRING_UNICODE | STRING_ESCAPE)*
+  private static boolean byteArray_1(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "byteArray_1")) return false;
+    int pos_ = current_position_(builder_);
+    while (true) {
+      if (!byteArray_1_0(builder_, level_ + 1)) break;
+      if (!empty_element_parsed_guard_(builder_, "byteArray_1", pos_)) break;
+      pos_ = current_position_(builder_);
+    }
+    return true;
+  }
+
+  // stringContent | STRING_UNICODE | STRING_ESCAPE
+  private static boolean byteArray_1_0(PsiBuilder builder_, int level_) {
+    if (!recursion_guard_(builder_, level_, "byteArray_1_0")) return false;
+    boolean result_;
+    Marker marker_ = enter_section_(builder_);
+    result_ = stringContent(builder_, level_ + 1);
+    if (!result_) result_ = consumeTokenSmart(builder_, STRING_UNICODE);
+    if (!result_) result_ = consumeTokenSmart(builder_, STRING_ESCAPE);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -3036,33 +3130,33 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // CHAR_LITERAL
   public static boolean charLit(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "charLit")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.CHAR_LITERAL)) return false;
+    if (!nextTokenIsSmart(builder_, CHAR_LITERAL)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.CHAR_LITERAL);
-    exit_section_(builder_, marker_, JuliaTypes.CHAR_LIT, result_);
+    result_ = consumeTokenSmart(builder_, CHAR_LITERAL);
+    exit_section_(builder_, marker_, CHAR_LIT, result_);
     return result_;
   }
 
   // INT_LITERAL
   public static boolean integer(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "integer")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.INT_LITERAL)) return false;
+    if (!nextTokenIsSmart(builder_, INT_LITERAL)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.INT_LITERAL);
-    exit_section_(builder_, marker_, JuliaTypes.INTEGER, result_);
+    result_ = consumeTokenSmart(builder_, INT_LITERAL);
+    exit_section_(builder_, marker_, INTEGER, result_);
     return result_;
   }
 
   // FLOAT_LITERAL | FLOAT_CONSTANT
   public static boolean floatLit(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "floatLit")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.FLOAT_CONSTANT, JuliaTypes.FLOAT_LITERAL)) return false;
+    if (!nextTokenIsSmart(builder_, FLOAT_CONSTANT, FLOAT_LITERAL)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.FLOAT_LIT, "<float lit>");
-    result_ = consumeTokenSmart(builder_, JuliaTypes.FLOAT_LITERAL);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.FLOAT_CONSTANT);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, FLOAT_LIT, "<float lit>");
+    result_ = consumeTokenSmart(builder_, FLOAT_LITERAL);
+    if (!result_) result_ = consumeTokenSmart(builder_, FLOAT_CONSTANT);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -3070,25 +3164,25 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // TRUE_KEYWORD | FALSE_KEYWORD
   public static boolean booleanLit(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "booleanLit")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.FALSE_KEYWORD, JuliaTypes.TRUE_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, FALSE_KEYWORD, TRUE_KEYWORD)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.BOOLEAN_LIT, "<boolean lit>");
-    result_ = consumeTokenSmart(builder_, JuliaTypes.TRUE_KEYWORD);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.FALSE_KEYWORD);
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, BOOLEAN_LIT, "<boolean lit>");
+    result_ = consumeTokenSmart(builder_, TRUE_KEYWORD);
+    if (!result_) result_ = consumeTokenSmart(builder_, FALSE_KEYWORD);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
 
   public static boolean ifExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "ifExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.IF_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, IF_KEYWORD)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.IF_KEYWORD);
+    result_ = consumeTokenSmart(builder_, IF_KEYWORD);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, -1);
     result_ = pinned_ && report_error_(builder_, ifExpr_1(builder_, level_ + 1)) && result_;
-    exit_section_(builder_, level_, marker_, JuliaTypes.IF_EXPR, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, IF_EXPR, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -3101,7 +3195,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     result_ = result_ && statements(builder_, level_ + 1);
     result_ = result_ && ifExpr_1_2(builder_, level_ + 1);
     result_ = result_ && ifExpr_1_3(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -3128,16 +3222,16 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // FOR_KEYWORD endOfLine indexer (commaSep indexer)* statements END_KEYWORD
   public static boolean forExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "forExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.FOR_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, FOR_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.FOR_KEYWORD);
+    result_ = consumeTokenSmart(builder_, FOR_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && indexer(builder_, level_ + 1);
     result_ = result_ && forExpr_3(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.FOR_EXPR, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, FOR_EXPR, result_);
     return result_;
   }
 
@@ -3169,15 +3263,15 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_M_BRACKET
   public static boolean forComprehension(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "forComprehension")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.LEFT_M_BRACKET)) return false;
+    if (!nextTokenIsSmart(builder_, LEFT_M_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LEFT_M_BRACKET);
+    result_ = consumeTokenSmart(builder_, LEFT_M_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && forComprehension_2(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_M_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.FOR_COMPREHENSION, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_M_BRACKET);
+    exit_section_(builder_, marker_, FOR_COMPREHENSION, result_);
     return result_;
   }
 
@@ -3199,14 +3293,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean whileExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "whileExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.WHILE_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, WHILE_KEYWORD)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = whileExpr_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, -1);
     result_ = pinned_ && report_error_(builder_, whileExpr_1(builder_, level_ + 1)) && result_;
-    exit_section_(builder_, level_, marker_, JuliaTypes.WHILE_EXPR, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, WHILE_EXPR, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -3215,7 +3309,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "whileExpr_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.WHILE_KEYWORD);
+    result_ = consumeTokenSmart(builder_, WHILE_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -3228,21 +3322,21 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     Marker marker_ = enter_section_(builder_);
     result_ = endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
 
   public static boolean function(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "function")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.FUNCTION_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, FUNCTION_KEYWORD)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = function_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 19);
     result_ = pinned_ && report_error_(builder_, function_1(builder_, level_ + 1)) && result_;
-    exit_section_(builder_, level_, marker_, JuliaTypes.FUNCTION, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, FUNCTION, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -3251,7 +3345,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "function_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.FUNCTION_KEYWORD);
+    result_ = consumeTokenSmart(builder_, FUNCTION_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && function_0_2(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
@@ -3270,7 +3364,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "function_0_2_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokensSmart(builder_, 0, JuliaTypes.SYM, JuliaTypes.DOT_SYM);
+    result_ = consumeTokensSmart(builder_, 0, SYM, DOT_SYM);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -3284,7 +3378,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     result_ = result_ && function_1_1(builder_, level_ + 1);
     result_ = result_ && function_1_2(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -3346,12 +3440,12 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // RETURN_KEYWORD (expr (COMMA_SYM expr)*)?
   public static boolean returnExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "returnExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.RETURN_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, RETURN_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.RETURN_KEYWORD);
+    result_ = consumeTokenSmart(builder_, RETURN_KEYWORD);
     result_ = result_ && returnExpr_1(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.RETURN_EXPR, result_);
+    exit_section_(builder_, marker_, RETURN_EXPR, result_);
     return result_;
   }
 
@@ -3390,7 +3484,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "returnExpr_1_0_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.COMMA_SYM);
+    result_ = consumeTokenSmart(builder_, COMMA_SYM);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -3399,11 +3493,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // BREAK_KEYWORD
   public static boolean breakExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "breakExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.BREAK_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, BREAK_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.BREAK_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.BREAK_EXPR, result_);
+    result_ = consumeTokenSmart(builder_, BREAK_KEYWORD);
+    exit_section_(builder_, marker_, BREAK_EXPR, result_);
     return result_;
   }
 
@@ -3414,16 +3508,16 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  END_KEYWORD
   public static boolean tryCatch(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "tryCatch")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.TRY_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, TRY_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.TRY_KEYWORD);
+    result_ = consumeTokenSmart(builder_, TRY_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
     result_ = result_ && tryCatch_3(builder_, level_ + 1);
     result_ = result_ && tryCatch_4(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.TRY_CATCH, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, TRY_CATCH, result_);
     return result_;
   }
 
@@ -3444,11 +3538,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // CONTINUE_KEYWORD
   public static boolean continueExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "continueExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.CONTINUE_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, CONTINUE_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.CONTINUE_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.CONTINUE_EXPR, result_);
+    result_ = consumeTokenSmart(builder_, CONTINUE_KEYWORD);
+    exit_section_(builder_, marker_, CONTINUE_EXPR, result_);
     return result_;
   }
 
@@ -3462,15 +3556,15 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_M_BRACKET
   public static boolean array(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "array")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.LEFT_M_BRACKET)) return false;
+    if (!nextTokenIsSmart(builder_, LEFT_M_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LEFT_M_BRACKET);
+    result_ = consumeTokenSmart(builder_, LEFT_M_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && array_2(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_M_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.ARRAY, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_M_BRACKET);
+    exit_section_(builder_, marker_, ARRAY, result_);
     return result_;
   }
 
@@ -3558,7 +3652,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "array_2_0_1_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SEMICOLON_SYM);
+    result_ = consumeTokenSmart(builder_, SEMICOLON_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && array_2_0_1_0_2(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
@@ -3617,19 +3711,19 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // COMMA_SYM?
   private static boolean array_2_0_1_0_2_0_2(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "array_2_0_1_0_2_0_2")) return false;
-    consumeTokenSmart(builder_, JuliaTypes.COMMA_SYM);
+    consumeTokenSmart(builder_, COMMA_SYM);
     return true;
   }
 
   public static boolean union(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "union")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.UNION_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, UNION_KEYWORD)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.UNION_KEYWORD);
+    result_ = consumeTokenSmart(builder_, UNION_KEYWORD);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 19);
-    exit_section_(builder_, level_, marker_, JuliaTypes.UNION, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, UNION, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -3638,18 +3732,18 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_BRACKET
   public static boolean tuple(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "tuple")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.LEFT_BRACKET)) return false;
+    if (!nextTokenIsSmart(builder_, LEFT_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LEFT_BRACKET);
+    result_ = consumeTokenSmart(builder_, LEFT_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     result_ = result_ && tuple_3(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && tuple_5(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.TUPLE, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
+    exit_section_(builder_, marker_, TUPLE, result_);
     return result_;
   }
 
@@ -3679,20 +3773,20 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // COMMA_SYM?
   private static boolean tuple_5(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "tuple_5")) return false;
-    consumeTokenSmart(builder_, JuliaTypes.COMMA_SYM);
+    consumeTokenSmart(builder_, COMMA_SYM);
     return true;
   }
 
   public static boolean macro(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "macro")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.MACRO_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, MACRO_KEYWORD)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
     result_ = macro_0(builder_, level_ + 1);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 19);
     result_ = pinned_ && report_error_(builder_, macro_1(builder_, level_ + 1)) && result_;
-    exit_section_(builder_, level_, marker_, JuliaTypes.MACRO, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, MACRO, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -3701,7 +3795,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "macro_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.MACRO_KEYWORD);
+    result_ = consumeTokenSmart(builder_, MACRO_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -3716,7 +3810,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     result_ = result_ && untypedVariables(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -3724,39 +3818,39 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // LET_KEYWORD statements END_KEYWORD
   public static boolean let(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "let")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.LET_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, LET_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LET_KEYWORD);
+    result_ = consumeTokenSmart(builder_, LET_KEYWORD);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.LET, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, LET, result_);
     return result_;
   }
 
   // BEGIN_KEYWORD statements END_KEYWORD
   public static boolean block(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "block")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.BEGIN_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, BEGIN_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.BEGIN_KEYWORD);
+    result_ = consumeTokenSmart(builder_, BEGIN_KEYWORD);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.BLOCK, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, BLOCK, result_);
     return result_;
   }
 
   // COLON_BEGIN_SYM statements RIGHT_BRACKET
   public static boolean colonBlock(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "colonBlock")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.COLON_BEGIN_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, COLON_BEGIN_SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.COLON_BEGIN_SYM);
+    result_ = consumeTokenSmart(builder_, COLON_BEGIN_SYM);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.COLON_BLOCK, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
+    exit_section_(builder_, marker_, COLON_BLOCK, result_);
     return result_;
   }
 
@@ -3765,14 +3859,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //   (commaSep memberAccess)*
   public static boolean export(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "export")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.EXPORT_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, EXPORT_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.EXPORT_KEYWORD);
+    result_ = consumeTokenSmart(builder_, EXPORT_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && memberAccess(builder_, level_ + 1);
     result_ = result_ && export_3(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.EXPORT, result_);
+    exit_section_(builder_, marker_, EXPORT, result_);
     return result_;
   }
 
@@ -3802,38 +3896,38 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // IMPORT_KEYWORD endOfLine imported
   public static boolean importExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "importExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.IMPORT_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, IMPORT_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.IMPORT_KEYWORD);
+    result_ = consumeTokenSmart(builder_, IMPORT_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && imported(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.IMPORT_EXPR, result_);
+    exit_section_(builder_, marker_, IMPORT_EXPR, result_);
     return result_;
   }
 
   // IMPORTALL_KEYWORD access
   public static boolean importAllExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "importAllExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.IMPORTALL_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, IMPORTALL_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.IMPORTALL_KEYWORD);
+    result_ = consumeTokenSmart(builder_, IMPORTALL_KEYWORD);
     result_ = result_ && access(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.IMPORT_ALL_EXPR, result_);
+    exit_section_(builder_, marker_, IMPORT_ALL_EXPR, result_);
     return result_;
   }
 
   // USING_KEYWORD endOfLine imported
   public static boolean using(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "using")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.USING_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, USING_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.USING_KEYWORD);
+    result_ = consumeTokenSmart(builder_, USING_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && imported(builder_, level_ + 1);
-    exit_section_(builder_, marker_, JuliaTypes.USING, result_);
+    exit_section_(builder_, marker_, USING, result_);
     return result_;
   }
 
@@ -3842,16 +3936,16 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  END_KEYWORD
   public static boolean abstractTypeDeclaration(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "abstractTypeDeclaration")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.ABSTRACT_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, ABSTRACT_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokensSmart(builder_, 0, JuliaTypes.ABSTRACT_KEYWORD, JuliaTypes.TYPE_KEYWORD);
+    result_ = consumeTokensSmart(builder_, 0, ABSTRACT_KEYWORD, TYPE_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && symbol(builder_, level_ + 1);
     result_ = result_ && abstractTypeDeclaration_4(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.ABSTRACT_TYPE_DECLARATION, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, ABSTRACT_TYPE_DECLARATION, result_);
     return result_;
   }
 
@@ -3867,7 +3961,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "abstractTypeDeclaration_4_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SUBTYPE_SYM);
+    result_ = consumeTokenSmart(builder_, SUBTYPE_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
@@ -3879,17 +3973,17 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  END_KEYWORD
   public static boolean primitiveTypeDeclaration(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "primitiveTypeDeclaration")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.PRIMITIVE_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, PRIMITIVE_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokensSmart(builder_, 0, JuliaTypes.PRIMITIVE_KEYWORD, JuliaTypes.TYPE_KEYWORD);
+    result_ = consumeTokensSmart(builder_, 0, PRIMITIVE_KEYWORD, TYPE_KEYWORD);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && symbol(builder_, level_ + 1);
     result_ = result_ && primitiveTypeDeclaration_4(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.PRIMITIVE_TYPE_DECLARATION, result_);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, PRIMITIVE_TYPE_DECLARATION, result_);
     return result_;
   }
 
@@ -3905,7 +3999,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "primitiveTypeDeclaration_4_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SUBTYPE_SYM);
+    result_ = consumeTokenSmart(builder_, SUBTYPE_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
@@ -3919,7 +4013,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean typeDeclaration(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "typeDeclaration")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.TYPE_DECLARATION, "<type declaration>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, TYPE_DECLARATION, "<type declaration>");
     result_ = typeDeclaration_0(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && symbol(builder_, level_ + 1);
@@ -3927,7 +4021,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     result_ = result_ && typeDeclaration_4(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && statements(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.END_KEYWORD);
+    result_ = result_ && consumeToken(builder_, END_KEYWORD);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;
   }
@@ -3966,8 +4060,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "typeDeclaration_0_0_1")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.TYPE_KEYWORD);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.STRUCT_KEYWORD);
+    result_ = consumeTokenSmart(builder_, TYPE_KEYWORD);
+    if (!result_) result_ = consumeTokenSmart(builder_, STRUCT_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -3991,7 +4085,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "typeDeclaration_4_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SUBTYPE_SYM);
+    result_ = consumeTokenSmart(builder_, SUBTYPE_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
@@ -4000,14 +4094,14 @@ public class JuliaParser implements PsiParser, LightPsiParser {
 
   public static boolean typeAlias(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "typeAlias")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.TYPEALIAS_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, TYPEALIAS_KEYWORD)) return false;
     boolean result_, pinned_;
     Marker marker_ = enter_section_(builder_, level_, _NONE_, null);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.TYPEALIAS_KEYWORD);
+    result_ = consumeTokenSmart(builder_, TYPEALIAS_KEYWORD);
     pinned_ = result_;
     result_ = pinned_ && expr(builder_, level_, 19);
     result_ = pinned_ && report_error_(builder_, typeAlias_1(builder_, level_ + 1)) && result_;
-    exit_section_(builder_, level_, marker_, JuliaTypes.TYPE_ALIAS, result_, pinned_, null);
+    exit_section_(builder_, level_, marker_, TYPE_ALIAS, result_, pinned_, null);
     return result_ || pinned_;
   }
 
@@ -4033,9 +4127,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  symbolLhsInternal (commaSep symbolLhsInternal)*
   public static boolean symbolLhs(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "symbolLhs")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.CONST_KEYWORD, JuliaTypes.LOCAL_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, CONST_KEYWORD, LOCAL_KEYWORD)) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _COLLAPSE_, JuliaTypes.SYMBOL_LHS, "<symbol lhs>");
+    Marker marker_ = enter_section_(builder_, level_, _COLLAPSE_, SYMBOL_LHS, "<symbol lhs>");
     result_ = symbolLhs_0(builder_, level_ + 1);
     result_ = result_ && symbolLhsInternal(builder_, level_ + 1);
     result_ = result_ && symbolLhs_2(builder_, level_ + 1);
@@ -4059,8 +4153,8 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "symbolLhs_0_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LOCAL_KEYWORD);
-    if (!result_) result_ = consumeTokenSmart(builder_, JuliaTypes.CONST_KEYWORD);
+    result_ = consumeTokenSmart(builder_, LOCAL_KEYWORD);
+    if (!result_) result_ = consumeTokenSmart(builder_, CONST_KEYWORD);
     exit_section_(builder_, marker_, null, result_);
     return result_;
   }
@@ -4091,33 +4185,33 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // SYM
   public static boolean symbol(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "symbol")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.SYM)) return false;
+    if (!nextTokenIsSmart(builder_, SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.SYM);
-    exit_section_(builder_, marker_, JuliaTypes.SYMBOL, result_);
+    result_ = consumeTokenSmart(builder_, SYM);
+    exit_section_(builder_, marker_, SYMBOL, result_);
     return result_;
   }
 
   // IN_KEYWORD
   public static boolean inAsOp(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "inAsOp")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.IN_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, IN_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.IN_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.IN_AS_OP, result_);
+    result_ = consumeTokenSmart(builder_, IN_KEYWORD);
+    exit_section_(builder_, marker_, IN_AS_OP, result_);
     return result_;
   }
 
   // MACRO_SYM
   public static boolean macroSymbol(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "macroSymbol")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.MACRO_SYM)) return false;
+    if (!nextTokenIsSmart(builder_, MACRO_SYM)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.MACRO_SYM);
-    exit_section_(builder_, marker_, JuliaTypes.MACRO_SYMBOL, result_);
+    result_ = consumeTokenSmart(builder_, MACRO_SYM);
+    exit_section_(builder_, marker_, MACRO_SYMBOL, result_);
     return result_;
   }
 
@@ -4127,18 +4221,18 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   //  RIGHT_BRACKET
   public static boolean bracketedExpr(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "bracketedExpr")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.LEFT_BRACKET)) return false;
+    if (!nextTokenIsSmart(builder_, LEFT_BRACKET)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.LEFT_BRACKET);
+    result_ = consumeTokenSmart(builder_, LEFT_BRACKET);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && bracketedExpr_2(builder_, level_ + 1);
     result_ = result_ && bracketedExpr_3(builder_, level_ + 1);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     result_ = result_ && bracketedExpr_5(builder_, level_ + 1);
     result_ = result_ && bracketedExpr_6(builder_, level_ + 1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.RIGHT_BRACKET);
-    exit_section_(builder_, marker_, JuliaTypes.BRACKETED_EXPR, result_);
+    result_ = result_ && consumeToken(builder_, RIGHT_BRACKET);
+    exit_section_(builder_, marker_, BRACKETED_EXPR, result_);
     return result_;
   }
 
@@ -4179,7 +4273,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "bracketedExpr_5_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.COMMA_SYM);
+    result_ = consumeTokenSmart(builder_, COMMA_SYM);
     result_ = result_ && endOfLine(builder_, level_ + 1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -4202,9 +4296,9 @@ public class JuliaParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(builder_, level_, "bracketedExpr_6_0")) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.FOR_KEYWORD);
+    result_ = consumeTokenSmart(builder_, FOR_KEYWORD);
     result_ = result_ && expr(builder_, level_ + 1, -1);
-    result_ = result_ && consumeToken(builder_, JuliaTypes.IN_KEYWORD);
+    result_ = result_ && consumeToken(builder_, IN_KEYWORD);
     result_ = result_ && expr(builder_, level_ + 1, -1);
     exit_section_(builder_, marker_, null, result_);
     return result_;
@@ -4238,15 +4332,15 @@ public class JuliaParser implements PsiParser, LightPsiParser {
       Marker marker_ = enter_section_(builder_, level_, _LEFT_, null);
       if (priority_ < 0 && plusLevelOperator(builder_, level_ + 1)) {
         result_ = exprOrEnd(builder_, level_, 0);
-        exit_section_(builder_, level_, marker_, JuliaTypes.PLUS_INDEXING, result_, true, null);
+        exit_section_(builder_, level_, marker_, PLUS_INDEXING, result_, true, null);
       }
       else if (priority_ < 1 && multiplyLevelOperator(builder_, level_ + 1)) {
         result_ = exprOrEnd(builder_, level_, 1);
-        exit_section_(builder_, level_, marker_, JuliaTypes.MULTIPLY_INDEXING, result_, true, null);
+        exit_section_(builder_, level_, marker_, MULTIPLY_INDEXING, result_, true, null);
       }
-      else if (priority_ < 2 && consumeTokenSmart(builder_, JuliaTypes.COLON_SYM)) {
+      else if (priority_ < 2 && consumeTokenSmart(builder_, COLON_SYM)) {
         result_ = exprOrEnd(builder_, level_, 2);
-        exit_section_(builder_, level_, marker_, JuliaTypes.RANGE_INDEXING, result_, true, null);
+        exit_section_(builder_, level_, marker_, RANGE_INDEXING, result_, true, null);
       }
       else {
         exit_section_(builder_, level_, marker_, null, false, false, null);
@@ -4259,11 +4353,11 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   // END_KEYWORD
   public static boolean end(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "end")) return false;
-    if (!nextTokenIsSmart(builder_, JuliaTypes.END_KEYWORD)) return false;
+    if (!nextTokenIsSmart(builder_, END_KEYWORD)) return false;
     boolean result_;
     Marker marker_ = enter_section_(builder_);
-    result_ = consumeTokenSmart(builder_, JuliaTypes.END_KEYWORD);
-    exit_section_(builder_, marker_, JuliaTypes.END, result_);
+    result_ = consumeTokenSmart(builder_, END_KEYWORD);
+    exit_section_(builder_, marker_, END, result_);
     return result_;
   }
 
@@ -4271,7 +4365,7 @@ public class JuliaParser implements PsiParser, LightPsiParser {
   public static boolean exprWrapper(PsiBuilder builder_, int level_) {
     if (!recursion_guard_(builder_, level_, "exprWrapper")) return false;
     boolean result_;
-    Marker marker_ = enter_section_(builder_, level_, _NONE_, JuliaTypes.EXPR_WRAPPER, "<expr wrapper>");
+    Marker marker_ = enter_section_(builder_, level_, _NONE_, EXPR_WRAPPER, "<expr wrapper>");
     result_ = expr(builder_, level_ + 1, 19);
     exit_section_(builder_, level_, marker_, result_, false, null);
     return result_;

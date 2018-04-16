@@ -191,7 +191,7 @@ class DocfmtLexer implements FlexLexer {
   }
 
   /** the input device */
-  private java.io.Reader zzReader;
+  private final java.io.Reader zzReader;
 
   /** the current state of the DFA */
   private int zzState;
@@ -289,7 +289,7 @@ class DocfmtLexer implements FlexLexer {
    *
    * @exception   java.io.IOException  if any I/O-Error occurs
    */
-  private boolean zzRefill() throws java.io.IOException {
+  private boolean zzRefill() {
     return true;
   }
 

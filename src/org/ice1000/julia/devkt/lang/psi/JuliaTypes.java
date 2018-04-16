@@ -4,7 +4,6 @@ package org.ice1000.julia.devkt.lang.psi;
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
-import org.ice1000.julia.devkt.lang.psi.impl.*;
 import org.ice1000.julia.devkt.lang.JuliaElementType;
 import org.ice1000.julia.devkt.lang.JuliaTokenType;
 import org.ice1000.julia.devkt.lang.psi.impl.*;
@@ -30,6 +29,7 @@ public interface JuliaTypes {
   IElementType BOOLEAN_LIT = new JuliaElementType("BOOLEAN_LIT");
   IElementType BRACKETED_EXPR = new JuliaElementType("BRACKETED_EXPR");
   IElementType BREAK_EXPR = new JuliaElementType("BREAK_EXPR");
+  IElementType BYTE_ARRAY = new JuliaElementType("BYTE_ARRAY");
   IElementType CATCH_CLAUSE = new JuliaElementType("CATCH_CLAUSE");
   IElementType CHAR_LIT = new JuliaElementType("CHAR_LIT");
   IElementType COLON_BLOCK = new JuliaElementType("COLON_BLOCK");
@@ -92,6 +92,7 @@ public interface JuliaTypes {
   IElementType QUOTE_OP = new JuliaElementType("QUOTE_OP");
   IElementType RANGE_INDEXING = new JuliaElementType("RANGE_INDEXING");
   IElementType RANGE_OP = new JuliaElementType("RANGE_OP");
+  IElementType RAW_STRING = new JuliaElementType("RAW_STRING");
   IElementType REGEX = new JuliaElementType("REGEX");
   IElementType RETURN_EXPR = new JuliaElementType("RETURN_EXPR");
   IElementType SINGLE_COMPREHENSION = new JuliaElementType("SINGLE_COMPREHENSION");
@@ -124,6 +125,7 @@ public interface JuliaTypes {
   IElementType UNTYPED_VARIABLES = new JuliaElementType("UNTYPED_VARIABLES");
   IElementType USER_TYPE = new JuliaElementType("USER_TYPE");
   IElementType USING = new JuliaElementType("USING");
+  IElementType VERSION_NUMBER = new JuliaElementType("VERSION_NUMBER");
   IElementType WHERE_CLAUSE = new JuliaElementType("WHERE_CLAUSE");
   IElementType WHILE_EXPR = new JuliaElementType("WHILE_EXPR");
 
@@ -144,6 +146,8 @@ public interface JuliaTypes {
   IElementType BLOCK_COMMENT_END = new JuliaTokenType("BLOCK_COMMENT_END");
   IElementType BLOCK_COMMENT_START = new JuliaTokenType("BLOCK_COMMENT_START");
   IElementType BREAK_KEYWORD = new JuliaTokenType("BREAK_KEYWORD");
+  IElementType BYTE_ARRAY_END = new JuliaTokenType("BYTE_ARRAY_END");
+  IElementType BYTE_ARRAY_START = new JuliaTokenType("BYTE_ARRAY_START");
   IElementType CATCH_KEYWORD = new JuliaTokenType("CATCH_KEYWORD");
   IElementType CHAR_LITERAL = new JuliaTokenType("CHAR_LITERAL");
   IElementType CMD_QUOTE_END = new JuliaTokenType("CMD_QUOTE_END");
@@ -229,6 +233,8 @@ public interface JuliaTypes {
   IElementType QUOTE_END = new JuliaTokenType("QUOTE_END");
   IElementType QUOTE_KEYWORD = new JuliaTokenType("QUOTE_KEYWORD");
   IElementType QUOTE_START = new JuliaTokenType("QUOTE_START");
+  IElementType RAW_STR_END = new JuliaTokenType("RAW_STR_END");
+  IElementType RAW_STR_START = new JuliaTokenType("RAW_STR_START");
   IElementType REGEX_END = new JuliaTokenType("REGEX_END");
   IElementType REGEX_START = new JuliaTokenType("REGEX_START");
   IElementType REGULAR_STRING_PART_LITERAL = new JuliaTokenType("REGULAR_STRING_PART_LITERAL");
@@ -265,6 +271,8 @@ public interface JuliaTypes {
   IElementType USHR_ASSIGN_SYM = new JuliaTokenType("USHR_ASSIGN_SYM");
   IElementType USHR_SYM = new JuliaTokenType("USHR_SYM");
   IElementType USING_KEYWORD = new JuliaTokenType("USING_KEYWORD");
+  IElementType VERSION_END = new JuliaTokenType("VERSION_END");
+  IElementType VERSION_START = new JuliaTokenType("VERSION_START");
   IElementType WHERE_KEYWORD = new JuliaTokenType("WHERE_KEYWORD");
   IElementType WHILE_KEYWORD = new JuliaTokenType("WHILE_KEYWORD");
 
@@ -327,6 +335,9 @@ public interface JuliaTypes {
       }
       else if (type == BREAK_EXPR) {
         return new JuliaBreakExprImpl(node);
+      }
+      else if (type == BYTE_ARRAY) {
+        return new JuliaByteArrayImpl(node);
       }
       else if (type == CATCH_CLAUSE) {
         return new JuliaCatchClauseImpl(node);
@@ -508,6 +519,9 @@ public interface JuliaTypes {
       else if (type == RANGE_OP) {
         return new JuliaRangeOpImpl(node);
       }
+      else if (type == RAW_STRING) {
+        return new JuliaRawStringImpl(node);
+      }
       else if (type == REGEX) {
         return new JuliaRegexImpl(node);
       }
@@ -603,6 +617,9 @@ public interface JuliaTypes {
       }
       else if (type == USING) {
         return new JuliaUsingImpl(node);
+      }
+      else if (type == VERSION_NUMBER) {
+        return new JuliaVersionNumberImpl(node);
       }
       else if (type == WHERE_CLAUSE) {
         return new JuliaWhereClauseImpl(node);

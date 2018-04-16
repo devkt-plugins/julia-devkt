@@ -1,12 +1,12 @@
 // This is a generated file. Not intended for manual editing.
 package org.ice1000.julia.devkt.lang.psi;
 
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaExpr;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaModuleDeclaration;
 import org.jetbrains.annotations.*;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
+import org.ice1000.julia.devkt.lang.psi.impl.IJuliaModuleDeclaration;
 import org.jetbrains.kotlin.com.intellij.psi.PsiNameIdentifierOwner;
+import org.ice1000.julia.devkt.lang.psi.impl.IJuliaExpr;
 
 public class JuliaVisitor extends PsiElementVisitor {
 
@@ -84,6 +84,10 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitBreakExpr(@NotNull JuliaBreakExpr o) {
+    visitExpr(o);
+  }
+
+  public void visitByteArray(@NotNull JuliaByteArray o) {
     visitExpr(o);
   }
 
@@ -340,6 +344,10 @@ public class JuliaVisitor extends PsiElementVisitor {
     visitExpr(o);
   }
 
+  public void visitRawString(@NotNull JuliaRawString o) {
+    visitExpr(o);
+  }
+
   public void visitRegex(@NotNull JuliaRegex o) {
     visitExpr(o);
     // visitIJuliaRegex(o);
@@ -350,7 +358,7 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitSingleComprehension(@NotNull JuliaSingleComprehension o) {
-    visitPsiElement(o);
+    visitPsiNameIdentifierOwner(o);
   }
 
   public void visitSingleIndexer(@NotNull JuliaSingleIndexer o) {
@@ -469,6 +477,10 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitUsing(@NotNull JuliaUsing o) {
+    visitExpr(o);
+  }
+
+  public void visitVersionNumber(@NotNull JuliaVersionNumber o) {
     visitExpr(o);
   }
 
