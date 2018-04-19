@@ -3,12 +3,12 @@ package org.ice1000.julia.devkt.lang.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
 import org.jetbrains.kotlin.com.intellij.psi.util.PsiTreeUtil;
 import org.ice1000.julia.devkt.lang.psi.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 
-public class JuliaCompactFunctionImpl extends JuliaCompactFunctionMixin implements JuliaCompactFunction {
+public class JuliaCompactFunctionImpl extends JuliaExprImpl implements JuliaCompactFunction {
 
   public JuliaCompactFunctionImpl(ASTNode node) {
     super(node);

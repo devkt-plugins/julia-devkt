@@ -1,13 +1,12 @@
 // This is a generated file. Not intended for manual editing.
 package org.ice1000.julia.devkt.lang.docfmt.psi;
 
+import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
+import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.ice1000.julia.devkt.lang.docfmt.DocfmtElementType;
 import org.ice1000.julia.devkt.lang.docfmt.DocfmtTokenType;
-import org.ice1000.julia.devkt.lang.docfmt.psi.impl.DocfmtConfigImpl;
-import org.ice1000.julia.devkt.lang.docfmt.psi.impl.DocfmtValueImpl;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
-import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
-import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
+import org.ice1000.julia.devkt.lang.docfmt.psi.impl.*;
 
 public interface DocfmtTypes {
 

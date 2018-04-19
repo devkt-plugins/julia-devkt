@@ -2,9 +2,8 @@
 package org.ice1000.julia.devkt.lang.psi;
 
 import org.jetbrains.annotations.*;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaFunctionDeclaration;
 
-public interface JuliaFunction extends JuliaExpr, IJuliaFunctionDeclaration {
+public interface JuliaFunction extends JuliaExpr {
 
   @Nullable
   JuliaFunctionSignature getFunctionSignature();

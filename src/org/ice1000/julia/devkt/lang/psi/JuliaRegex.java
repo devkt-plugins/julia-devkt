@@ -3,9 +3,8 @@ package org.ice1000.julia.devkt.lang.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaRegex;
 
-public interface JuliaRegex extends JuliaExpr, IJuliaRegex {
+public interface JuliaRegex extends JuliaExpr {
 
   @NotNull
   List<JuliaStringContent> getStringContentList();

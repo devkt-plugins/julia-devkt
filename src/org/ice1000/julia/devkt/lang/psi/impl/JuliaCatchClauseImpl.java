@@ -2,11 +2,12 @@
 package org.ice1000.julia.devkt.lang.psi.impl;
 
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
+import org.jetbrains.kotlin.com.intellij.extapi.psi.ASTWrapperPsiElement;
 import org.ice1000.julia.devkt.lang.psi.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 
-public class JuliaCatchClauseImpl extends JuliaCatchDeclarationMixin implements JuliaCatchClause {
+public class JuliaCatchClauseImpl extends ASTWrapperPsiElement implements JuliaCatchClause {
 
   public JuliaCatchClauseImpl(ASTNode node) {
     super(node);

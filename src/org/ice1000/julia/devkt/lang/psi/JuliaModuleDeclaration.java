@@ -2,9 +2,9 @@
 package org.ice1000.julia.devkt.lang.psi;
 
 import org.jetbrains.annotations.*;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaModuleDeclaration;
+import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
 
-public interface JuliaModuleDeclaration extends IJuliaModuleDeclaration {
+public interface JuliaModuleDeclaration extends PsiElement {
 
   @NotNull
   JuliaStatements getStatements();

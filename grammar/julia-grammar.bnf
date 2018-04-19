@@ -1,0 +1,649 @@
+{
+  // ref: https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm
+  parserClass='org.ice1000.julia.devkt.lang.JuliaParser'
+  extends='org.jetbrains.kotlin.com.intellij.extapi.psi.ASTWrapperPsiElement'
+  psiClassPrefix='Julia'
+  psiImplClassSuffix='Impl'
+  psiPackage='org.ice1000.julia.devkt.lang.psi'
+  psiImplPackage='org.ice1000.julia.devkt.lang.psi.impl'
+
+  extends('.*Op|.*Expr|.*Lit|.*ymbol|.*lock')=expr
+
+  tokenTypeClass='org.ice1000.julia.devkt.lang.JuliaTokenType'
+  elementTypeHolderClass='org.ice1000.julia.devkt.lang.psi.JuliaTypes'
+  elementTypeClass='org.ice1000.julia.devkt.lang.JuliaElementType'
+  psiImplUtilClass='org.ice1000.julia.devkt.lang.psi.impl.JuliaPsiImplUtils'
+}
+
+juliaFile ::= endOfLine statements
+
+symbol ::= SYM {
+	mixin='org.ice1000.julia.devkt.lang.psi.impl.JuliaSymbolMixin'
+	implements=['org.ice1000.julia.devkt.lang.psi.impl.IJuliaSymbol']
+}
+
+macroSymbol ::= MACRO_SYM
+
+unaryOpAsSymbol ::=
+   MINUS_SYM
+ | DOT_SYM
+ | PLUS_SYM
+ | NOT_SYM
+ | INTERPOLATE_SYM
+
+opAsSymbol ::=
+   SEMICOLON_SYM
+ | QUESTION_SYM
+ | SUBTYPE_SYM
+ | INVERSE_DIV_SYM
+ | IS_SYM
+ | ISNT_SYM
+ | EQ_SYM
+ | LAMBDA_ABSTRACTION
+ | ARROW_SYM
+ | SLICE_SYM
+ | LESS_THAN_SYM
+ | LESS_THAN_OR_EQUAL_SYM
+ | AND_SYM
+ | OR_SYM
+ | PIPE_SYM
+ | INVRESE_PIPE_SYM
+ | SHL_SYM
+ | SHR_SYM
+ | USHR_SYM
+ | FRACTION_SYM
+ | DIVIDE_SYM
+ | REMAINDER_SYM
+ | EXPONENT_SYM
+ | MULTIPLY_SYM
+ | EQUALS_SYM
+ | UNEQUAL_SYM
+ | GREATER_THAN_SYM
+ | GREATER_THAN_OR_EQUAL_SYM
+ | TRANSPOSE_SYM
+ | IN_SYM
+ | MISC_COMPARISON_SYM
+ | MISC_PLUS_SYM
+ | MISC_MULTIPLY_SYM
+ | MISC_EXPONENT_SYM
+ | FACTORISE_SYM
+ | BITWISE_AND_SYM
+ | BITWISE_OR_SYM
+ | BITWISE_XOR_SYM
+ | SPECIAL_ARROW_SYM
+ | MISC_ARROW_SYM
+ | BITWISE_NOT_SYM
+ | ASSIGN_SYM
+
+private comment ::= blockComment | LINE_COMMENT
+private blockComment ::= BLOCK_COMMENT_START (BLOCK_COMMENT_BODY | blockComment)* BLOCK_COMMENT_END
+
+private singleQuoteString ::= QUOTE_START stringTemplateElement* QUOTE_END
+private tripleQuoteString ::= TRIPLE_QUOTE_START stringTemplateElement* TRIPLE_QUOTE_END
+command ::= CMD_QUOTE_START stringTemplateElement* CMD_QUOTE_END { extends=expr }
+string ::= singleQuoteString | tripleQuoteString {
+	extends=expr
+}
+
+regex ::= REGEX_START (stringContent | STRING_ESCAPE)* REGEX_END {
+	extends=expr
+}
+
+rawString ::=
+ RAW_STR_START stringContent* RAW_STR_END {
+	extends=expr
+}
+
+versionNumber ::=
+ VERSION_START stringContent* VERSION_END {
+	extends=expr
+}
+
+byteArray ::=
+ BYTE_ARRAY_START
+  (stringContent | STRING_UNICODE | STRING_ESCAPE)*
+ BYTE_ARRAY_END {
+	extends=expr
+}
+
+private stringTemplateElement::=
+   STRING_UNICODE
+ | STRING_ESCAPE
+ | template
+ | stringContent
+
+template ::= SHORT_INTERPOLATE_SYM symbol | STRING_INTERPOLATE_START expr STRING_INTERPOLATE_END
+stringContent ::= REGULAR_STRING_PART_LITERAL
+
+integer ::= INT_LITERAL { extends=expr }
+floatLit ::= FLOAT_LITERAL | FLOAT_CONSTANT
+booleanLit ::= TRUE_KEYWORD | FALSE_KEYWORD
+charLit ::= CHAR_LITERAL
+
+private endOfLineImpl ::= EOL | comment
+private endOfLine ::= endOfLineImpl*
+private semi ::= endOfLineImpl | SEMICOLON_SYM
+statements ::= semi* (statement (semi+ statement)*)? semi* {
+}
+
+private statement ::=
+   moduleDeclaration
+ | globalStatement
+ | expr (COMMA_SYM expr)*
+
+moduleDeclaration ::=
+ (BAREMODULE_KEYWORD | MODULE_KEYWORD) symbol endOfLine
+  statements
+ END_KEYWORD {
+}
+
+globalStatement ::=
+ GLOBAL_KEYWORD endOfLine
+ symbol (COMMA_SYM endOfLine symbol)*
+
+typeAnnotation ::=
+ DOUBLE_COLON endOfLine
+ primaryExpr endOfLine
+ typeParameters?
+
+typedNamedVariable ::=
+ (
+   symbol typeAnnotation?
+ | symbol? typeAnnotation
+ ) (EQ_SYM expr)?
+
+typeParameters ::=
+ LEFT_B_BRACKET endOfLine
+  expr? (commaSep expr?)* endOfLine
+ RIGHT_B_BRACKET
+
+userType ::= primaryExpr typeParameters?
+typeAlias ::= TYPEALIAS_KEYWORD symbol typeParameters? userType { extends=expr }
+
+private expressionList ::= expr (commaSep expr)* COMMA_SYM?
+namedParameter ::= symbol endOfLine EQ_SYM endOfLine expr
+
+// lowest
+applyMacroOp ::= macroSymbol expr expr*// BUG: `expr+` is useless, and I don't know why~
+
+// naming: level+number or type+level or type+levelOp
+expr ::=
+   compactFunction
+ | applyMacroOp
+ | assignLevel
+ | arrowOp
+ | ternaryOp
+ | lambda
+ | miscArrowsOp
+ | orOp
+ | andOp
+ | comparisonLevelOp
+ | pipeLevelOp
+ | quoteLevel
+ | plusLevelOp
+ | bitwiseLevel
+ | multiplyLevel
+ | fractionLevel
+ | exponentLevel
+ | typeOp
+ | unaryLevel
+ | suffixedExpr
+ | primaryExpr
+
+memberAccessOp ::= expr DOT_SYM expr
+
+memberAccess ::=
+   IN_KEYWORD
+ | UNION_KEYWORD
+ | opAsSymbol
+ | symbolAndMacroSymbol (DOT_SYM symbolAndMacroSymbol)*
+
+private access ::= (DOT_SYM | DOUBLE_DOT_SYM | SLICE_SYM)? memberAccess
+private symbolAndMacroSymbol ::= symbol | macroSymbol
+
+compactFunction ::=
+ symbol
+  (typeParameters endOfLine)?
+   functionSignature endOfLine
+    (whereClause endOfLine)?
+ EQ_SYM endOfLine expr {
+	pin=6
+	extends=expr
+}
+
+// level 0
+private assignLevel ::=
+   assignOp
+ | assignLevelOp
+
+assignOp ::= expr (EQ_SYM | ASSIGN_SYM) endOfLine expr {
+	rightAssociative=true
+}
+
+assignLevelOp ::= expr assignLevelOperator endOfLine expr { rightAssociative=true }
+assignLevelOperator ::=
+   COLON_ASSIGN_SYM
+ | BITWISE_AND_ASSIGN_SYM
+ | BITWISE_OR_ASSIGN_SYM
+ | BITWISE_XOR_ASSIGN_SYM
+ | INVERSE_DIV_ASSIGN_SYM
+ | SHL_ASSIGN_SYM
+ | SHR_ASSIGN_SYM
+ | REMAINDER_ASSIGN_SYM
+ | USHR_ASSIGN_SYM
+ | PLUS_ASSIGN_SYM
+ | MINUS_ASSIGN_SYM
+ | MULTIPLY_ASSIGN_SYM
+ | FRACTION_ASSIGN_SYM
+ | DIVIDE_ASSIGN_SYM
+ | FACTORISE_ASSIGN_SYM
+ | EXPONENT_ASSIGN_SYM
+
+// level 1.5
+arrowOp ::= expr ARROW_SYM endOfLine expr { rightAssociative=true }
+
+// ? :
+// level 2
+ternaryOp ::= expr QUESTION_SYM endOfLine rangeOp { pin=2 }
+
+// level 16
+private suffixedExpr ::=
+   applyFunctionOp
+ | applyIndexOp
+ | memberAccessOp
+ | applyWhereOp
+ | type
+
+type ::= expr typeParameters { extends=expr }
+
+exprOrEnd ::=
+   plusIndexing
+ | multiplyIndexing
+ | rangeIndexing
+ | end
+ | exprWrapper
+
+end ::= END_KEYWORD { extends=exprOrEnd }
+exprWrapper ::= primaryExpr { extends=exprOrEnd }
+rangeIndexing ::= exprOrEnd COLON_SYM exprOrEnd { extends=exprOrEnd }
+plusIndexing ::= exprOrEnd plusLevelOperator exprOrEnd { extends=exprOrEnd }
+multiplyIndexing ::= exprOrEnd multiplyLevelOperator exprOrEnd { extends=exprOrEnd }
+
+applyIndexOp ::= expr LEFT_M_BRACKET
+ (
+   comprehensionElement
+ | exprOrEnd (COMMA_SYM exprOrEnd)*
+ )? endOfLine
+ RIGHT_M_BRACKET
+
+applyWhereOp ::= expr whereClause
+
+applyFunctionOp ::=
+ expr DOT_SYM? LEFT_BRACKET endOfLine
+  (
+     comprehensionElement+
+   | (expressionList endOfLine)
+  )? arguments?
+  endOfLine
+ RIGHT_BRACKET doBlock?
+
+arguments ::=
+ SEMICOLON_SYM endOfLine
+ (
+   namedParameter
+  (commaSep namedParameter)*
+ )?
+ endOfLine
+
+private symbolLhsInternal ::= symbol | LEFT_BRACKET symbol RIGHT_BRACKET
+symbolLhs ::=
+ ((LOCAL_KEYWORD | CONST_KEYWORD) endOfLine)
+ symbolLhsInternal (commaSep symbolLhsInternal)* { extends=expr }
+
+// All reserved but unassigned
+// level 2.5
+miscArrowsOp ::= expr (SPECIAL_ARROW_SYM | MISC_ARROW_SYM) endOfLine expr
+
+// ||
+// level 3
+orOp ::= expr OR_SYM endOfLine expr
+
+// &&
+// level 4
+andOp ::= expr AND_SYM endOfLine expr
+
+// ->
+// level 5
+lambda ::=
+ (symbol | tuple | LEFT_BRACKET RIGHT_BRACKET)
+  LAMBDA_ABSTRACTION expr {
+	extends=expr
+}
+
+// level 6
+comparisonLevelOp ::= expr comparisonLevelOperator endOfLine expr
+comparisonLevelOperator ::=
+   LESS_THAN_SYM
+ | LESS_THAN_OR_EQUAL_SYM
+ | GREATER_THAN_SYM
+ | GREATER_THAN_OR_EQUAL_SYM
+ | EQUALS_SYM
+ | UNEQUAL_SYM
+ | IS_SYM
+ | ISNT_SYM
+ | SUBTYPE_SYM
+ | MISC_COMPARISON_SYM
+
+// |>
+// level 7
+pipeLevelOperator ::= PIPE_SYM | INVERSE_PIPE_SYM
+pipeLevelOp ::= expr pipeLevelOperator endOfLine expr
+
+private quoteLevel ::=
+   spliceOp
+ | colonOp
+ | quoteOp
+ | compoundQuoteOp
+
+colonSymBegins::= COLON_SYM endOfLine LEFT_BRACKET
+colonOp ::= expr colonSymBegins expr RIGHT_BRACKET
+spliceOp ::= expr SLICE_SYM
+compoundQuoteOp ::= QUOTE_KEYWORD endOfLine (expr endOfLine)* END_KEYWORD
+quoteOp ::= COLON_SYM endOfLine quotable
+private quotable ::=
+   unaryOpAsSymbol
+ | opAsSymbol
+ | QUOTE_KEYWORD
+ | expr
+
+// + - etc
+plusLevelOp ::= expr plusLevelOperator endOfLine expr
+plusLevelOperator ::=
+   INTERPOLATE_SYM
+ | BITWISE_XOR_SYM
+ | BITWISE_OR_SYM
+ | PLUS_SYM
+ | MINUS_SYM
+ | MISC_PLUS_SYM
+
+private bitwiseLevel ::=
+   bitwiseLevelOp
+ | rangeOp
+ | transposeOp
+
+bitwiseLevelOp ::= expr bitwiseLevelOperator endOfLine expr
+rangeOp ::= expr COLON_SYM endOfLine expr
+bitwiseLevelOperator ::=
+   SHR_SYM
+ | USHR_SYM
+ | SHL_SYM
+
+transposeOp ::= expr TRANSPOSE_SYM
+
+// * / % & ^
+private multiplyLevel ::=
+   multiplyLevelOp
+ | implicitMultiplyOp
+
+multiplyLevelOp ::= expr multiplyLevelOperator endOfLine expr
+multiplyLevelOperator ::=
+   MULTIPLY_SYM
+ | DIVIDE_SYM
+ | REMAINDER_SYM
+ | INVERSE_DIV_SYM
+ | FACTORISE_SYM
+ | BITWISE_AND_SYM
+ | MISC_MULTIPLY_SYM
+
+implicitMultiplyOp ::= specialLhs blockComment? IMPLICIT_MULTIPLY_SYM specialRhs
+private specialLhs ::= integer | floatLit | symbol | string
+private specialRhs ::= symbol | string | charLit | integer | floatLit
+
+// // .//
+// level 12
+private fractionLevel ::=
+   fractionOp
+ | inOp
+
+fractionOp ::= expr FRACTION_SYM endOfLine expr
+inOp ::= expr (IN_KEYWORD | IN_SYM) endOfLine expr
+
+// ^ .^
+private exponentLevel ::=
+   miscExponentOp
+ | exponentOp
+
+exponentOp ::= expr EXPONENT_SYM endOfLine expr
+miscExponentOp ::= expr MISC_EXPONENT_SYM endOfLine expr
+
+// ::
+// level 13.5
+typeOp ::= expr DOUBLE_COLON endOfLine expr
+
+// level 15
+private unaryLevel ::=
+   unaryPlusOp
+ | unaryMinusOp
+ | unaryTypeOp
+ | unarySubtypeOp
+ | unaryInterpolateOp
+ | notOp
+ | bitWiseNotOp
+
+bitWiseNotOp ::= BITWISE_NOT_SYM endOfLine expr
+unaryTypeOp ::= DOUBLE_COLON endOfLine expr
+unarySubtypeOp ::= SUBTYPE_SYM endOfLine expr
+unaryMinusOp ::= MINUS_SYM endOfLine expr
+unaryInterpolateOp ::= INTERPOLATE_SYM endOfLine expr
+notOp ::= NOT_SYM endOfLine expr
+unaryPlusOp ::= PLUS_SYM endOfLine expr
+
+private primaryExpr ::=
+   string
+ | command
+ | regex
+ | rawString
+ | versionNumber
+ | byteArray
+ | charLit
+ | integer
+ | floatLit
+ | booleanLit
+ | ifExpr
+ | forExpr
+ | forComprehension
+ | whileExpr
+ | function
+ | returnExpr
+ | breakExpr
+ | tryCatch
+ | continueExpr
+ | array
+ | union
+ | tuple
+ | macro
+ | let
+ | block
+ | colonBlock
+ | export
+ | importExpr
+ | importAllExpr
+ | using
+ | abstractTypeDeclaration
+ | primitiveTypeDeclaration
+ | typeDeclaration
+ | typeAlias
+ | symbolLhs
+ | symbol
+ | inAsOp
+ | macroSymbol
+ | bracketedExpr
+
+bracketedExpr ::=
+ LEFT_BRACKET endOfLine
+  (opAsSymbol | unaryOpAsSymbol)?
+   statements? endOfLine (COMMA_SYM endOfLine)? (FOR_KEYWORD expr IN_KEYWORD expr)*
+ RIGHT_BRACKET
+
+whereClause ::= WHERE_KEYWORD afterWhere
+inAsOp ::= IN_KEYWORD
+
+private afterWhere ::=
+   (symbol | LEFT_B_BRACKET symbol RIGHT_B_BRACKET)
+    ((SUBTYPE_SYM | EQ_SYM) endOfLine expr)?
+ | LEFT_B_BRACKET
+    (afterWhere (commaSep afterWhere)*)?
+     COMMA_SYM? endOfLine
+   RIGHT_B_BRACKET
+
+array ::=
+ LEFT_M_BRACKET endOfLine
+  (
+   (expr (commaSep? expr)*)
+   (SEMICOLON_SYM endOfLine
+    (expr (commaSep? expr)* COMMA_SYM?)?)*
+  )?
+  endOfLine
+ RIGHT_M_BRACKET { extends=expr }
+
+union ::= UNION_KEYWORD tuple { extends=expr }
+
+tuple ::=
+ LEFT_BRACKET endOfLine
+  expr (commaSep expr)* endOfLine COMMA_SYM? endOfLine
+ RIGHT_BRACKET { extends=expr }
+
+private commaSep ::= endOfLine COMMA_SYM endOfLine
+functionSignature ::=
+ LEFT_BRACKET endOfLine
+  (typedNamedVariable (commaSep typedNamedVariable)*)?
+  (SEMICOLON_SYM endOfLine
+   (typedNamedVariable (commaSep typedNamedVariable)*)?)?
+  commaSep?
+  (SLICE_SYM endOfLine)?
+ RIGHT_BRACKET
+
+untypedVariables ::=
+ LEFT_BRACKET endOfLine
+  (symbol (commaSep symbol)*)? endOfLine
+ RIGHT_BRACKET
+
+function ::=
+ FUNCTION_KEYWORD endOfLine
+  (SYM DOT_SYM)? // TODO
+   symbol
+   (typeParameters endOfLine)?
+   (functionSignature endOfLine)?
+   (whereClause endOfLine)?
+  statements
+ END_KEYWORD {
+	extends=expr
+}
+
+private typeModifiers ::= IMMUTABLE_KEYWORD | MUTABLE_KEYWORD
+typeDeclaration ::=
+ (typeModifiers? (TYPE_KEYWORD | STRUCT_KEYWORD) | typeModifiers) endOfLine
+  symbol typeParameters? (SUBTYPE_SYM endOfLine expr)? endOfLine
+  statements
+ END_KEYWORD {
+	extends=expr
+}
+
+abstractTypeDeclaration ::=
+ ABSTRACT_KEYWORD TYPE_KEYWORD endOfLine
+  symbol (SUBTYPE_SYM endOfLine expr)? endOfLine
+ END_KEYWORD { extends=expr }
+
+primitiveTypeDeclaration ::=
+ PRIMITIVE_KEYWORD TYPE_KEYWORD endOfLine
+  symbol (SUBTYPE_SYM endOfLine expr)? expr endOfLine
+ END_KEYWORD { extends=expr }
+
+macro ::=
+ MACRO_KEYWORD endOfLine
+    symbol endOfLine
+   untypedVariables endOfLine
+  statements
+ END_KEYWORD {
+	extends=expr
+}
+
+let ::= LET_KEYWORD statements END_KEYWORD { extends=expr }
+
+block ::= BEGIN_KEYWORD statements END_KEYWORD
+
+colonBlock ::= COLON_BEGIN_SYM statements RIGHT_BRACKET
+
+doBlock ::= DO_KEYWORD statements END_KEYWORD
+
+breakExpr ::= BREAK_KEYWORD
+
+continueExpr ::= CONTINUE_KEYWORD
+
+export ::=
+ EXPORT_KEYWORD endOfLine
+  memberAccess
+  (commaSep memberAccess)* { extends=expr }
+
+importAllExpr ::=
+ IMPORTALL_KEYWORD access { extends=expr }
+
+private imported ::= access (COLON_SYM symbolAndMacroSymbol)? (commaSep access)*
+
+importExpr ::= IMPORT_KEYWORD endOfLine imported { extends=expr }
+using ::= USING_KEYWORD endOfLine imported { extends=expr }
+
+ifExpr ::=
+ IF_KEYWORD expr endOfLine
+  statements
+  elseIfClause*
+  elseClause?
+ END_KEYWORD
+
+elseIfClause ::= ELSEIF_KEYWORD expr endOfLine
+ statements
+
+elseClause ::= ELSE_KEYWORD statements
+
+forComprehension ::=
+ LEFT_M_BRACKET endOfLine
+  comprehensionElement+ endOfLine
+ RIGHT_M_BRACKET {
+	extends=expr
+}
+
+comprehensionElement ::=
+ endOfLine expr endOfLine
+ (
+  FOR_KEYWORD
+  singleComprehension
+   (commaSep singleComprehension)?)+
+
+singleComprehension ::= indexer (IF_KEYWORD expr)?
+forExpr ::= FOR_KEYWORD endOfLine indexer (commaSep indexer)* statements END_KEYWORD
+private indexer ::= multiIndexer | singleIndexer
+private infixIndexer ::= IN_KEYWORD | IN_SYM | EQ_SYM
+singleIndexer ::= symbol infixIndexer endOfLine expr
+multiIndexer ::= tuple infixIndexer endOfLine expr
+
+whileExpr ::=
+ WHILE_KEYWORD endOfLine
+  expr endOfLine
+   statements
+ END_KEYWORD { extends=expr }
+
+returnExpr ::= RETURN_KEYWORD (expr (COMMA_SYM expr)*)?
+
+tryCatch ::=
+ TRY_KEYWORD endOfLine
+  statements
+ catchClause?
+ finallyClause?
+ END_KEYWORD { extends=expr }
+
+catchClause ::=
+ CATCH_KEYWORD symbol? endOfLine
+ statements
+
+finallyClause ::=
+ FINALLY_KEYWORD statements

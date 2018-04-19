@@ -1,12 +1,12 @@
 // This is a generated file. Not intended for manual editing.
 package org.ice1000.julia.devkt.lang.psi;
 
-import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
-import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.ice1000.julia.devkt.lang.JuliaElementType;
 import org.ice1000.julia.devkt.lang.JuliaTokenType;
 import org.ice1000.julia.devkt.lang.psi.impl.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
+import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
+import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
 
 public interface JuliaTypes {
 

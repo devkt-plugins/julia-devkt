@@ -4,9 +4,6 @@ package org.ice1000.julia.devkt.lang.psi;
 import org.jetbrains.annotations.*;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaModuleDeclaration;
-import org.jetbrains.kotlin.com.intellij.psi.PsiNameIdentifierOwner;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaExpr;
 
 public class JuliaVisitor extends PsiElementVisitor {
 
@@ -56,7 +53,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitAssignOp(@NotNull JuliaAssignOp o) {
     visitExpr(o);
-    // visitPsiNameIdentifierOwner(o);
   }
 
   public void visitBitWiseNotOp(@NotNull JuliaBitWiseNotOp o) {
@@ -92,7 +88,7 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitCatchClause(@NotNull JuliaCatchClause o) {
-    visitPsiNameIdentifierOwner(o);
+    visitPsiElement(o);
   }
 
   public void visitCharLit(@NotNull JuliaCharLit o) {
@@ -117,7 +113,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitCompactFunction(@NotNull JuliaCompactFunction o) {
     visitExpr(o);
-    // visitIJuliaFunctionDeclaration(o);
   }
 
   public void visitComparisonLevelOp(@NotNull JuliaComparisonLevelOp o) {
@@ -165,7 +160,7 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitExpr(@NotNull JuliaExpr o) {
-    visitIJuliaExpr(o);
+    visitPsiElement(o);
   }
 
   public void visitExprOrEnd(@NotNull JuliaExprOrEnd o) {
@@ -198,7 +193,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitFunction(@NotNull JuliaFunction o) {
     visitExpr(o);
-    // visitIJuliaFunctionDeclaration(o);
   }
 
   public void visitFunctionSignature(@NotNull JuliaFunctionSignature o) {
@@ -247,13 +241,10 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitMacro(@NotNull JuliaMacro o) {
     visitExpr(o);
-    // visitPsiNameIdentifierOwner(o);
-    // visitDocStringOwner(o);
   }
 
   public void visitMacroSymbol(@NotNull JuliaMacroSymbol o) {
     visitExpr(o);
-    // visitPsiNameIdentifierOwner(o);
   }
 
   public void visitMemberAccess(@NotNull JuliaMemberAccess o) {
@@ -273,7 +264,7 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitModuleDeclaration(@NotNull JuliaModuleDeclaration o) {
-    visitIJuliaModuleDeclaration(o);
+    visitPsiElement(o);
   }
 
   public void visitMultiIndexer(@NotNull JuliaMultiIndexer o) {
@@ -350,7 +341,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitRegex(@NotNull JuliaRegex o) {
     visitExpr(o);
-    // visitIJuliaRegex(o);
   }
 
   public void visitReturnExpr(@NotNull JuliaReturnExpr o) {
@@ -358,7 +348,7 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitSingleComprehension(@NotNull JuliaSingleComprehension o) {
-    visitPsiNameIdentifierOwner(o);
+    visitPsiElement(o);
   }
 
   public void visitSingleIndexer(@NotNull JuliaSingleIndexer o) {
@@ -375,7 +365,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitString(@NotNull JuliaString o) {
     visitExpr(o);
-    // visitIJuliaString(o);
   }
 
   public void visitStringContent(@NotNull JuliaStringContent o) {
@@ -425,7 +414,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitTypeDeclaration(@NotNull JuliaTypeDeclaration o) {
     visitExpr(o);
-    // visitIJuliaTypeDeclaration(o);
   }
 
   public void visitTypeOp(@NotNull JuliaTypeOp o) {
@@ -437,7 +425,7 @@ public class JuliaVisitor extends PsiElementVisitor {
   }
 
   public void visitTypedNamedVariable(@NotNull JuliaTypedNamedVariable o) {
-    visitPsiNameIdentifierOwner(o);
+    visitPsiElement(o);
   }
 
   public void visitUnaryInterpolateOp(@NotNull JuliaUnaryInterpolateOp o) {
@@ -490,18 +478,6 @@ public class JuliaVisitor extends PsiElementVisitor {
 
   public void visitWhileExpr(@NotNull JuliaWhileExpr o) {
     visitExpr(o);
-  }
-
-  public void visitIJuliaExpr(@NotNull IJuliaExpr o) {
-    visitElement(o);
-  }
-
-  public void visitIJuliaModuleDeclaration(@NotNull IJuliaModuleDeclaration o) {
-    visitElement(o);
-  }
-
-  public void visitPsiNameIdentifierOwner(@NotNull PsiNameIdentifierOwner o) {
-    visitElement(o);
   }
 
   public void visitPsiElement(@NotNull PsiElement o) {

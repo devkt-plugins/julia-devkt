@@ -2,9 +2,9 @@
 package org.ice1000.julia.devkt.lang.psi;
 
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.psi.PsiNameIdentifierOwner;
+import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
 
-public interface JuliaSingleComprehension extends PsiNameIdentifierOwner {
+public interface JuliaSingleComprehension extends PsiElement {
 
   @Nullable
   JuliaExpr getExpr();
