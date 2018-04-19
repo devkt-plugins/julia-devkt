@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
 
 public interface DocfmtConfig extends PsiElement {
 
-  @NotNull
-  DocfmtValue getValue();
+	@NotNull
+	DocfmtValue getValue();
 
 }

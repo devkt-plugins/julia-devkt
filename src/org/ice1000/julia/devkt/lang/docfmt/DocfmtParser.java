@@ -4,6 +4,7 @@ package org.ice1000.julia.devkt.lang.docfmt;
 import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder;
 import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder.Marker;
 import static org.ice1000.julia.devkt.lang.docfmt.psi.DocfmtTypes.*;
+import static org.jetbrains.kotlin.com.intellij.lang.parser.GeneratedParserUtilBase.*;
 
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode;

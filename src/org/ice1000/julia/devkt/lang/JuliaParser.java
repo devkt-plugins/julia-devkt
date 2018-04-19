@@ -4,6 +4,7 @@ package org.ice1000.julia.devkt.lang;
 import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder;
 import org.jetbrains.kotlin.com.intellij.lang.PsiBuilder.Marker;
 import static org.ice1000.julia.devkt.lang.psi.JuliaTypes.*;
+import static org.jetbrains.kotlin.com.intellij.lang.parser.GeneratedParserUtilBase.*;
 
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
@@ -11,7 +12,7 @@ import org.jetbrains.kotlin.com.intellij.psi.tree.TokenSet;
 import org.jetbrains.kotlin.com.intellij.lang.PsiParser;
 import org.jetbrains.kotlin.com.intellij.lang.LightPsiParser;
 
-@SuppressWarnings({"SimplifiableIfStatement", "UnusedAssignment"})
+@SuppressWarnings("ALL")
 public class JuliaParser implements PsiParser, LightPsiParser {
 
   public ASTNode parse(IElementType t, PsiBuilder b) {

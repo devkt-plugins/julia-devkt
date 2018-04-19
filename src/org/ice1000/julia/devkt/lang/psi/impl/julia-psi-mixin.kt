@@ -3,9 +3,8 @@ package org.ice1000.julia.devkt.lang.psi.impl
 import org.ice1000.julia.devkt.lang.psi.*
 import org.jetbrains.kotlin.com.intellij.extapi.psi.ASTWrapperPsiElement
 import org.jetbrains.kotlin.com.intellij.lang.ASTNode
-import org.jetbrains.kotlin.com.intellij.psi.PsiNameIdentifierOwner
 
-interface IJuliaSymbol : JuliaExpr, PsiNameIdentifierOwner {
+interface IJuliaSymbol : JuliaExpr {
 	// check if they are declarations
 	val isField: Boolean
 	val isFunctionName: Boolean
@@ -26,17 +25,17 @@ interface IJuliaSymbol : JuliaExpr, PsiNameIdentifierOwner {
 abstract class JuliaSymbolMixin(node: ASTNode) : ASTWrapperPsiElement(node), JuliaSymbol {
 	final override val isField: Boolean by lazy {
 		this !== parent.children.firstOrNull { it is JuliaSymbol } &&
-			parent is JuliaTypeDeclaration
+				parent is JuliaTypeDeclaration
 	}
 	final override val isFunctionName by lazy {
 		(parent is JuliaCompactFunction && this === parent.firstChild) ||
-			parent is JuliaFunction
+				parent is JuliaFunction
 	}
 	final override val isMacroName get() = parent is JuliaMacro
 	final override val isModuleName get() = parent is JuliaModuleDeclaration
 	final override val isTypeName by lazy {
 		(parent is JuliaTypeDeclaration && this === parent.children.firstOrNull { it is JuliaSymbol }) ||
-			parent is JuliaTypeAlias
+				parent is JuliaTypeAlias
 	}
 	final override val isAbstractTypeName get() = parent is JuliaAbstractTypeDeclaration
 	final override val isPrimitiveTypeName get() = parent is JuliaPrimitiveTypeDeclaration
@@ -50,24 +49,24 @@ abstract class JuliaSymbolMixin(node: ASTNode) : ASTWrapperPsiElement(node), Jul
 	}
 	final override val isIndexParameter: Boolean by lazy {
 		parent is JuliaSingleIndexer ||
-			parent.parent is JuliaMultiIndexer
+				parent.parent is JuliaMultiIndexer
 	}
 	final override val isVariableName by lazy {
 		parent is JuliaAssignOp && this === parent.firstChild ||
-			parent is JuliaSymbolLhs
+				parent is JuliaSymbolLhs
 	}
 	final override val isDeclaration by lazy {
 		isFunctionName or
-			isVariableName or
-			isFunctionParameter or
-			isMacroName or
-			isModuleName or
-			isTypeName or
-			isAbstractTypeName or
-			isGlobalName or
-			isPrimitiveTypeName or
-			isCatchSymbol or
-			isIndexParameter or
-			isLambdaParameter
+				isVariableName or
+				isFunctionParameter or
+				isMacroName or
+				isModuleName or
+				isTypeName or
+				isAbstractTypeName or
+				isGlobalName or
+				isPrimitiveTypeName or
+				isCatchSymbol or
+				isIndexParameter or
+				isLambdaParameter
 	}
 }
