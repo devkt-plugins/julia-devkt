@@ -1,15 +1,18 @@
 package org.ice1000.julia.devkt.lang
 
 import org.ice1000.devkt.openapi.*
+import org.ice1000.devkt.openapi.ui.IconLoader
 import org.ice1000.julia.devkt.lang.psi.JuliaSymbol
 import org.ice1000.julia.devkt.lang.psi.JuliaTypes
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType
+import javax.swing.Icon
 
 class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 		JuliaLanguage.INSTANCE,
 		JuliaParserDefinition
 ) {
+	override val icon: Icon = IconLoader.getIcon("/icon/julia_file.png")
 	override val lineCommentStart: String get() = "#"
 	override fun satisfies(fileName: String) = fileName.endsWith(".jl")
 	override fun attributesOf(type: IElementType, colorScheme: ColorScheme<TextAttributes>) = when (type) {
