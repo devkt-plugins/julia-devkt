@@ -56,17 +56,17 @@ abstract class JuliaSymbolMixin(node: ASTNode) : ASTWrapperPsiElement(node), Jul
 				parent is JuliaSymbolLhs
 	}
 	final override val isDeclaration by lazy {
-		isFunctionName or
-				isVariableName or
-				isFunctionParameter or
-				isMacroName or
-				isModuleName or
-				isTypeName or
-				isAbstractTypeName or
-				isGlobalName or
-				isPrimitiveTypeName or
-				isCatchSymbol or
-				isIndexParameter or
+		isFunctionName ||
+				isVariableName ||
+				isFunctionParameter ||
+				isMacroName ||
+				isModuleName ||
+				isTypeName ||
+				isAbstractTypeName ||
+				isGlobalName ||
+				isPrimitiveTypeName ||
+				isCatchSymbol ||
+				isIndexParameter ||
 				isLambdaParameter
 	}
 }
