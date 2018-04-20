@@ -1,15 +1,12 @@
 // This is a generated file. Not intended for manual editing.
 package org.ice1000.julia.devkt.lang.psi.impl;
 
-import org.ice1000.julia.devkt.lang.psi.JuliaAbstractTypeDeclaration;
-import org.ice1000.julia.devkt.lang.psi.JuliaExpr;
-import org.ice1000.julia.devkt.lang.psi.JuliaVisitor;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
+import java.util.List;
+import org.jetbrains.annotations.*;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
 import org.jetbrains.kotlin.com.intellij.psi.util.PsiTreeUtil;
-
-import java.util.List;
+import org.ice1000.julia.devkt.lang.psi.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 
 public class JuliaAbstractTypeDeclarationImpl extends JuliaExprImpl implements JuliaAbstractTypeDeclaration {
 
@@ -22,7 +19,7 @@ public class JuliaAbstractTypeDeclarationImpl extends JuliaExprImpl implements J
   }
 
   public void accept(@NotNull PsiElementVisitor visitor) {
-    if (visitor instanceof JuliaVisitor) accept((JuliaVisitor) visitor);
+    if (visitor instanceof JuliaVisitor) accept((JuliaVisitor)visitor);
     else super.accept(visitor);
   }
 

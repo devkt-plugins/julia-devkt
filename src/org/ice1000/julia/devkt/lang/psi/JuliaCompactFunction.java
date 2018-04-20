@@ -3,9 +3,8 @@ package org.ice1000.julia.devkt.lang.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaFunctionDeclaration;
 
-public interface JuliaCompactFunction extends JuliaExpr, IJuliaFunctionDeclaration {
+public interface JuliaCompactFunction extends JuliaExpr {
 
   @NotNull
   List<JuliaExpr> getExprList();

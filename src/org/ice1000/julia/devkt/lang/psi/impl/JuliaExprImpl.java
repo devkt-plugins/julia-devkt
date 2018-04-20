@@ -2,11 +2,12 @@
 package org.ice1000.julia.devkt.lang.psi.impl;
 
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
+import org.jetbrains.kotlin.com.intellij.extapi.psi.ASTWrapperPsiElement;
 import org.ice1000.julia.devkt.lang.psi.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 
-public abstract class JuliaExprImpl extends JuliaExprMixin implements JuliaExpr {
+public abstract class JuliaExprImpl extends ASTWrapperPsiElement implements JuliaExpr {
 
   public JuliaExprImpl(ASTNode node) {
     super(node);

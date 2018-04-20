@@ -1,8 +1,8 @@
 // This is a generated file. Not intended for manual editing.
 package org.ice1000.julia.devkt.lang.psi;
 
-import org.ice1000.julia.devkt.lang.psi.impl.IJuliaExpr;
+import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
 
-public interface JuliaExpr extends IJuliaExpr {
+public interface JuliaExpr extends PsiElement {
 
 }

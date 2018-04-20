@@ -3,9 +3,9 @@ package org.ice1000.julia.devkt.lang.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.psi.PsiNameIdentifierOwner;
+import org.jetbrains.kotlin.com.intellij.psi.PsiElement;
 
-public interface JuliaTypedNamedVariable extends PsiNameIdentifierOwner {
+public interface JuliaTypedNamedVariable extends PsiElement {
 
   @NotNull
   List<JuliaExpr> getExprList();

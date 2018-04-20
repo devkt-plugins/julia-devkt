@@ -2,11 +2,11 @@
 package org.ice1000.julia.devkt.lang.psi.impl;
 
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
 import org.ice1000.julia.devkt.lang.psi.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 
-public class JuliaMacroImpl extends JuliaMacroMixin implements JuliaMacro {
+public class JuliaMacroImpl extends JuliaExprImpl implements JuliaMacro {
 
   public JuliaMacroImpl(ASTNode node) {
     super(node);

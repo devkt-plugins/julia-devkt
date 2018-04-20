@@ -3,12 +3,12 @@ package org.ice1000.julia.devkt.lang.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
-import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 import org.jetbrains.kotlin.com.intellij.psi.PsiElementVisitor;
 import org.jetbrains.kotlin.com.intellij.psi.util.PsiTreeUtil;
 import org.ice1000.julia.devkt.lang.psi.*;
+import org.jetbrains.kotlin.com.intellij.lang.ASTNode;
 
-public class JuliaLambdaImpl extends JuliaLambdaMixin implements JuliaLambda {
+public class JuliaLambdaImpl extends JuliaExprImpl implements JuliaLambda {
 
   public JuliaLambdaImpl(ASTNode node) {
     super(node);

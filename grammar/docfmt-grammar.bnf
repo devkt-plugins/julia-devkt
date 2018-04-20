@@ -1,0 +1,17 @@
+{
+  parserClass='org.ice1000.julia.devkt.lang.docfmt.DocfmtParser'
+  extends='org.jetbrains.kotlin.com.intellij.extapi.psi.ASTWrapperPsiElement'
+  psiClassPrefix='Docfmt'
+  psiImplClassSuffix='Impl'
+  psiPackage='org.ice1000.julia.devkt.lang.docfmt.psi'
+  psiImplPackage='org.ice1000.julia.devkt.lang.docfmt.psi.impl'
+
+  tokenTypeClass='org.ice1000.julia.devkt.lang.docfmt.DocfmtTokenType'
+  elementTypeHolderClass='org.ice1000.julia.devkt.lang.docfmt.psi.DocfmtTypes'
+  elementTypeClass='org.ice1000.julia.devkt.lang.docfmt.DocfmtElementType'
+}
+
+configFile ::= EOL* ((config | LINE_COMMENT) (EOL+ (config | LINE_COMMENT))*)? EOL*
+value ::= SYM | INT
+config ::= SYM EQ_SYM value
+
