@@ -1,14 +1,14 @@
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
 import java.io.*
 
-val kotlinVersion = "1.2.31"
+val kotlinVersion = "1.2.40"
 
 group = "org.ice1000.julia.devkt.lang"
 version = "v1.1"
 
 plugins {
   java
-  kotlin("jvm") version "1.2.31"
+  kotlin("jvm") version "1.2.40"
 }
 
 java {
