@@ -8,6 +8,7 @@ version = "v1.2-SNAPSHOT"
 
 plugins {
 	java
+	application
 	kotlin("jvm") version "1.2.40"
 }
 
@@ -34,6 +35,10 @@ java.sourceSets {
 	}
 }
 
+application {
+	mainClassName = "org.ice1000.devkt.Main"
+}
+
 repositories {
 	mavenCentral()
 	jcenter()
@@ -42,6 +47,7 @@ repositories {
 
 dependencies {
 	compileOnly(kotlin("compiler-embeddable", kotlinVersion))
-	compileOnly(group = "com.github.ice1000", name = "dev-kt", version = "925140f0ee")
+	compileOnly(group = "com.github.ice1000.dev-kt", name = "common", version = "67357db04d")
+	runtime(group = "com.github.ice1000.dev-kt", name = "swing", version = "67357db04d")
 }
 
