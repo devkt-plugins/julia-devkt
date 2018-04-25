@@ -4,17 +4,14 @@ import org.ice1000.devkt.ASTToken
 import org.ice1000.devkt.openapi.*
 import org.ice1000.devkt.openapi.ui.IconLoader
 import org.ice1000.devkt.openapi.util.CompletionElement
-import org.ice1000.julia.devkt.lang.psi.JuliaNamedParameter
-import org.ice1000.julia.devkt.lang.psi.JuliaSymbol
-import org.ice1000.julia.devkt.lang.psi.JuliaTypedNamedVariable
-import org.ice1000.julia.devkt.lang.psi.JuliaTypes
+import org.ice1000.julia.devkt.lang.psi.*
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType
 import javax.swing.Icon
 
 class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
-	JuliaLanguage.INSTANCE,
-	JuliaParserDefinition
+		JuliaLanguage.INSTANCE,
+		JuliaParserDefinition
 ) {
 	override val icon: Icon = IconLoader.getIcon("/icon/julia_file.png")
 	override val lineCommentStart: String get() = "#"
@@ -60,45 +57,45 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 	}
 
 	private val completionList = listOf(
-		"break",
-		"where",
-		"do",
-		"continue",
-		"true",
-		"false",
-		"module",
-		"baremodule",
-		"export",
-		"if",
-		"in",
-		"end",
-		"importall",
-		"import",
-		"using",
-		"elseif",
-		"else",
-		"for",
-		"while",
-		"return",
-		"try",
-		"catch",
-		"finally",
-		"function",
-		"type",
-		"abstract",
-		"primitive",
-		"struct",
-		"typealias",
-		"immutable",
-		"mutable",
-		"union",
-		"quote",
-		"begin",
-		"macro",
-		"global",
-		"local",
-		"const",
-		"let"
+			"break",
+			"where",
+			"do",
+			"continue",
+			"true",
+			"false",
+			"module",
+			"baremodule",
+			"export",
+			"if",
+			"in",
+			"end",
+			"importall",
+			"import",
+			"using",
+			"elseif",
+			"else",
+			"for",
+			"while",
+			"return",
+			"try",
+			"catch",
+			"finally",
+			"function",
+			"type",
+			"abstract",
+			"primitive",
+			"struct",
+			"typealias",
+			"immutable",
+			"mutable",
+			"union",
+			"quote",
+			"begin",
+			"macro",
+			"global",
+			"local",
+			"const",
+			"let"
 	)
 
 	override val blockComment = JULIA_BLOCK_COMMENT_BEGIN to JULIA_BLOCK_COMMENT_END
@@ -106,7 +103,7 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 		return inputString == "$" || super.invokeAutoPopup(currentElement, inputString)
 	}
 
-	override val initialCompletionElementList: Set<CompletionElement> = completionList.mapTo(HashSet()) {
+	override val initialCompletionElementList = completionList.mapTo(HashSet()) {
 		CompletionElement(it, type = "Keyword")
 	} + listOf(CompletionElement("println", lookup = "sout"))
 
