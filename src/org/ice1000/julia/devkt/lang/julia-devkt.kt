@@ -2,6 +2,7 @@ package org.ice1000.julia.devkt.lang
 
 import org.ice1000.devkt.openapi.*
 import org.ice1000.devkt.openapi.ui.IconLoader
+import org.ice1000.julia.devkt.lang.psi.JuliaNamedParameter
 import org.ice1000.julia.devkt.lang.psi.JuliaSymbol
 import org.ice1000.julia.devkt.lang.psi.JuliaTypes
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement
@@ -55,7 +56,10 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 		else -> super.attributesOf(type, colorScheme)
 	}
 
-	override val blockComment = "#=" to "=#"
+	override val blockComment = JULIA_BLOCK_COMMENT_BEGIN to JULIA_BLOCK_COMMENT_END
+	override fun shouldAddAsCompletion(element: PsiElement): Boolean {
+		return element is JuliaNamedParameter
+	}
 
 	override fun annotate(element: PsiElement, document: AnnotationHolder<TextAttributes>, colorScheme: ColorScheme<TextAttributes>) {
 		super.annotate(element, document, colorScheme)

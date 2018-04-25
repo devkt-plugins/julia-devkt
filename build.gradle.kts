@@ -4,44 +4,44 @@ import java.io.*
 val kotlinVersion = "1.2.40"
 
 group = "org.ice1000.julia.devkt.lang"
-version = "v1.1"
+version = "v1.2-SNAPSHOT"
 
 plugins {
-  java
-  kotlin("jvm") version "1.2.40"
+	java
+	kotlin("jvm") version "1.2.40"
 }
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_1_8
-  targetCompatibility = JavaVersion.VERSION_1_8
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 java.sourceSets {
-  "main" {
-    java.setSrcDirs(listOf("src"))
-    withConvention(KotlinSourceSet::class) {
-      kotlin.setSrcDirs(listOf("src"))
-    }
-    resources.setSrcDirs(listOf("res"))
-  }
+	"main" {
+		java.setSrcDirs(listOf("src"))
+		withConvention(KotlinSourceSet::class) {
+			kotlin.setSrcDirs(listOf("src"))
+		}
+		resources.setSrcDirs(listOf("res"))
+	}
 
-  "test" {
-    java.setSrcDirs(emptyList<Any>())
-    withConvention(KotlinSourceSet::class) {
-      kotlin.setSrcDirs(emptyList<Any>())
-    }
-    resources.setSrcDirs(emptyList<Any>())
-  }
+	"test" {
+		java.setSrcDirs(emptyList<Any>())
+		withConvention(KotlinSourceSet::class) {
+			kotlin.setSrcDirs(emptyList<Any>())
+		}
+		resources.setSrcDirs(emptyList<Any>())
+	}
 }
 
 repositories {
-  mavenCentral()
-  jcenter()
-  maven("https://jitpack.io")
+	mavenCentral()
+	jcenter()
+	maven("https://jitpack.io")
 }
 
 dependencies {
-  compileOnly(kotlin("compiler-embeddable", kotlinVersion))
-  compileOnly(files(*File("lib").listFiles()))
+	compileOnly(kotlin("compiler-embeddable", kotlinVersion))
+	compileOnly(group = "com.github.ice1000", name = "dev-kt", version = "925140f0ee")
 }
 
