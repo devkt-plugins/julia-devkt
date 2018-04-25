@@ -108,7 +108,7 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 
 	override val initialCompletionElementList: Set<CompletionElement> = completionList.mapTo(HashSet()) {
 		CompletionElement(it, type = "Keyword")
-	}
+	} + listOf(CompletionElement("println", lookup = "sout"))
 
 	override fun shouldAddAsCompletion(element: PsiElement): Boolean {
 		return element is JuliaTypedNamedVariable

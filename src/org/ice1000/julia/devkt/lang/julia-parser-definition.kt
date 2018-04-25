@@ -99,14 +99,6 @@ class JuliaTokenType(debugName: String) : IElementType(debugName, JuliaLanguage.
 				JuliaTypes.BITWISE_XOR_ASSIGN_SYM,
 				JuliaTypes.REMAINDER_ASSIGN_SYM
 		)
-
-		@JvmField
-		val CONCATENATABLE_TOKENS = TokenSet.orSet(COMMENTS, STRINGS)
-
-		fun fromText(code: String, project: Project): PsiElement = PsiFileFactory
-				.getInstance(project)
-				.createFileFromText(JuliaLanguage.INSTANCE, code)
-				.firstChild
 	}
 }
 
