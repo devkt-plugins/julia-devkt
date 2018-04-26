@@ -4,6 +4,7 @@ import org.ice1000.devkt.ASTToken
 import org.ice1000.devkt.openapi.*
 import org.ice1000.devkt.openapi.ui.IconLoader
 import org.ice1000.devkt.openapi.util.CompletionElement
+import org.ice1000.devkt.ui.DevKtDocumentHandler
 import org.ice1000.julia.devkt.lang.psi.*
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement
 import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType
@@ -105,7 +106,9 @@ class Julia<TextAttributes> : ExtendedDevKtLanguage<TextAttributes>(
 
 	override val initialCompletionElementList = completionList.mapTo(HashSet()) {
 		CompletionElement(it, type = "Keyword")
-	} + listOf(CompletionElement("println", lookup = "sout"))
+	} + listOf(object : CompletionElement("println", lookup = "sout") {
+		override fun afterInsert(documentHandler: DevKtDocumentHandler<*>) = documentHandler.insert("(")
+	})
 
 	override fun shouldAddAsCompletion(element: PsiElement): Boolean {
 		return element is JuliaTypedNamedVariable
