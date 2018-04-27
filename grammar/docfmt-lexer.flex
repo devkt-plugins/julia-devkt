@@ -1,8 +1,8 @@
-package org.ice1000.julia.lang.docfmt;
+package org.ice1000.julia.devkt.lang.docfmt;
 
-import com.intellij.lexer.FlexLexer;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.TokenType;
+import org.jetbrains.kotlin.com.intellij.lexer.FlexLexer;
+import org.jetbrains.kotlin.com.intellij.psi.tree.IElementType;
+import org.jetbrains.kotlin.com.intellij.psi.TokenType;
 import org.ice1000.julia.lang.docfmt.psi.DocfmtTypes;
 
 %%
